@@ -12,7 +12,7 @@ const nextConfig = {
       "ugc-.same-assets.com",
     
     ],
-    remotePattens: [
+    remotePatterns: [
       {
         protocol: "https",
         hostname: "source.unsplash.com",
