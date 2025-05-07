@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import "@/styles/globals.css";
 
 export default function Home() {
   const [showCityModal, setShowCityModal] = useState(false);
