@@ -1,15 +1,17 @@
-"use client"
+"user client"
 
 import { useEffect } from "react";
 
-export default function ClientBody() {
-    children,
-}: {
-    children: React.ReactNode;
-}) { 
+export default function ClientBody({ children }: { children: React.ReactNode }) { 
     useEffect(() => { 
-        document.body.className = "antialised";
-    }, [])
+        document.body.classList.add("antialiased");
 
-    return <div className="antialised">{children}</div>;
+        return () => {
+            document.body.classList.remove("antialiased");
+        };
+    }, []);
+
+    return <div className="antiliased">{children}</div>;
+
+    
 }
