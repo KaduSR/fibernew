@@ -5,10 +5,16 @@ export default {
   darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/pages/components/**/*.{js,ts,jsx,tsx,mdx}"
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["var(--font-sans)", "sans-serif"],
+        serif: ["var(--font-serif)", "serif"],
+        mono: ["var(--font-mono)", "monospace"],
+        inter: ["var(--font-inter)", "sans-serif"],
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -52,7 +58,7 @@ export default {
         md: "var(--radius-md)",
         lg: "var(--radius-lg)",
       },
-      Container: {
+      container: {
         center: true,
         padding: {
           DEFAULT: "1rem",
@@ -71,6 +77,6 @@ export default {
         },
       },
     },
-    },
+  },
   plugins: [tailwindcssAnimate],
 } satisfies Config;

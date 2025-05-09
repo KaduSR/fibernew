@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import "@/styles/globals.css";
+// pages/_app.tsx
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  return <></>;
+
   const [showCityModal, setShowCityModal] = useState(false);
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
 
