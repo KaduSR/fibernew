@@ -135,6 +135,40 @@ export function Footer() {
           </div>
         </div>
       </div>
+      {/* Cpyright bar */}
+      <div className="bg-primary text-white">
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <Link href="/acessibilidade" className="text-sm">
+              Acessibilidade
+            </Link>
+
+            <div className="flex items-center">
+              <Link href="/" className="inline-block mr-4">
+                <Image
+                  src="/img/logos/FiberNet.svg"
+                  alt="FiberNet"
+                  width={100}
+                  height={24}
+                  className="h-6 w-auto brightness-0 invert"
+                />
+              </Link>
+            </div>
+            <div className="text-sm text-white/90">
+              <p className="text-xs">
+                Telecom Fiber Net LTDA - CNPJ: 22.969.088/0001-97
+              </p>
+              <p className="text-xs">
+                RJ 145, km 93 - nº 53320 - Elisabeth, Rio das Flores - RJ,
+                27660-000
+              </p>
+            </div>
+          </div>
+          <div className="text-center mt-4 text-xs">
+            Copyright 2025 © - Fiber NET - Todos os direitos reservados
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }
