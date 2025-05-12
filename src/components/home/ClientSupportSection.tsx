@@ -7,16 +7,9 @@ const SUPPORT_OPTIONS = [
   {
     id: "invoice",
     title: "2ª via da fatura",
-    description: "Baixe sua fatura através do Brisacliente.",
+    description: "Baixe sua fatura através da nossa central do assinante.",
     icon: FileText,
     link: "/area-do-cliente/2via",
-  },
-  {
-    id: "call-us",
-    title: "Ligamos para você",
-    description: "Informe seus dados que entraremos em contato.",
-    icon: PhoneCall,
-    link: "/ligamos-para-voce",
   },
   {
     id: "help-center",
@@ -35,7 +28,7 @@ const SUPPORT_OPTIONS = [
   {
     id: "stores",
     title: "Nossas lojas",
-    description: "Verifique se há cobertura Brisanet na sua cidade.",
+    description: "Verifique se há cobertura Fiber.NET na sua cidade.",
     icon: MapPin,
     link: "/nossas-lojas",
   },

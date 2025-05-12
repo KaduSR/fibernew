@@ -6,7 +6,6 @@ import { CitySelectionModal } from "@/components/modals/CitySelectionModal";
 import ClientSupportSection from "@/components/home/ClientSupportSection";
 
 export default function Home() {
-  return <></>;
 
   const [showCityModal, setShowCityModal] = useState(false);
   const [selectedCity, setSelectedCity] = useState<string | null>(null);
