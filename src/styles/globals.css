@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 @layer base {
     :root {
         --background: 0 0% 100%;
@@ -128,48 +129,47 @@
     You can adjust the values to make it more or less pronounced
   */
 
-.animation-blob {
-    animation: blob 7s infinite alternate;
-}
+  .animation-blob {
+      animation: blob 7s infinite alternate;
+  }
 
-.animation-delay-2000 {
-    animation-delay: 2s;
-}
+  .animation-delay-2000 {
+      animation-delay: 2s;
+  }
 
-.animation-delay-4000 {
-    animation-delay: 4s;
-}
+  .animation-delay-4000 {
+      animation-delay: 4s;
+  }
 
-.animation-float {
-    animation: float 3s ease-in-out infinite;
-}
+  .animation-float {
+      animation: float 3s ease-in-out infinite;
+  }
 
-.animation-pulse-slow {
-    animation: pulse 2s infinite;
-}
+  .animation-pulse-slow {
+      animation: pulse 2s infinite;
+  }
 
-/* Custom styles for Fiber.NET */
+  /* Botões, links e cards */
+  .nav-link {
+      @apply text-sm font-medium hover:text-primary transition-colors;
+  }
 
-.nav-link {
-    @apply text-sm font-medium hover:text-primary transition-colors;
-}
+  .nav-link-active {
+      @apply text-primary font-semibold;
+  }
 
-.nav-link-active {
-    @apply text-primary font-semibold;
-}
+  .btn-primary {
+      @apply bg-primary text-white hover:bg-primary/90 font-medium rounded-md transition-colors;
+  }
 
-.btn-primary {
-    @apply bg-primary text-white hover:bg-primary/90 font-medium rounded-md transition-colors;
-}
+  .btn-secondary {
+      @apply bg-white border border-primary text-primary hover:bg-primary/10 font-medium rounded-md transition-colors;
+  }
 
-.btn-secondary {
-    @apply bg-white border border-primary text-primary hover:bg-primary/10 font-medium rounded-md transition-colors;
-}
+  .plan-card {
+      @apply rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow;
+  }
 
-.plan-card {
-    @apply rounded-lg border border-border shadown-sm hover:shadown-md transition-shadow;
-}
-
-.service-icon {
-    @apply text-primary w-12 h-12
-}
+  .service-icon {
+      @apply text-primary w-12 h-12;
+  }
