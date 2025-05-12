@@ -2,6 +2,8 @@
 
 // pages/_app.tsx
 import { useEffect, useState } from "react";
+import { CitySelectionModal } from "@/components/modals/CitySelectionModal";
+import ClientSupportSection from "@/components/home/ClientSupportSection";
 
 export default function Home() {
   return <></>;
@@ -30,10 +32,11 @@ export default function Home() {
 
   return (
     <>
+      <ClientSupportSection/>
       <CitySelectionModal
         isOpen={showCityModal}
         onClose={() => setShowCityModal(false)}
-        onSelect={handleCitySelect}
+        onCitySelect={handleCitySelect}
       />
     </>
   );
