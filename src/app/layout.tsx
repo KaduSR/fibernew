@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/fonts.css";
 import "@/styles/styles1.css"
+import "@/styles/globals.css";;
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
 
@@ -28,3 +29,4 @@ export default function RootLayout({
     </html>
   );
 }
+  

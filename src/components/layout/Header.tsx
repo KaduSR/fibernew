@@ -42,15 +42,18 @@ export function Header() {
           <Link href="/parceiros" className="hover:underline">
             Parceiros
           </Link>
-          <Link href="/indique-um-amigo" className="hover:underline">
-            Indique um amigo
-          </Link>
         </div>
         <div className="flex items-center space-x-4">
-          <Link href="/assine-ja" className="hover:underline">
+          <Link
+            href="https://wa.me/552424581861?text=%20Oi!%20Tenho%20interesse%20na%20internet%20da%20Fiber.NET%20.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es,%20por%20favor?%20"
+            className="hover:underline"
+          >
             Assine já
           </Link>
-          <Link href="/area-do-cliente" className="hover:underline flex items-center">
+          <Link
+            href="https://centralfiber.online/central_assinante_web/login"
+            className="hover:underline flex items-center"
+          >
             Área do cliente <ChevronDown className="h-4 w-4 ml-1" />
           </Link>
         </div>
@@ -62,7 +65,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/img/logos/brisanet-logo.svg"
+              src="/img/logos/Imagem1.png"
               alt="Brisanet"
               width={120}
               height={32}
@@ -71,7 +74,7 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex justify-start space-x-6 w-full">
             <DropdownMenu>
               <DropdownMenuTrigger className="nav-link flex items-center">
                 Internet <ChevronDown className="h-4 w-4 ml-1" />
@@ -86,38 +89,9 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger className="nav-link flex items-center">
-                Móvel 5G <ChevronDown className="h-4 w-4 ml-1" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>
-                  <Link href="/movel-5g">Planos</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="/movel-5g/cobertura">Cobertura</Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
-            <Link href="/combos" className="nav-link">
-              Combos
+            <Link href="/seguranca" className="nav-link">
+              Segurança
             </Link>
-
-            <DropdownMenu>
-              <DropdownMenuTrigger className="nav-link flex items-center">
-                Streaming <ChevronDown className="h-4 w-4 ml-1" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-                <DropdownMenuItem>
-                  <Link href="/streaming/brisamusic">Brisamusic</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="/streaming/brisaplay">Brisaplay</Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-
             <DropdownMenu>
               <DropdownMenuTrigger className="nav-link flex items-center">
                 Mais Serviços <ChevronDown className="h-4 w-4 ml-1" />
@@ -131,11 +105,6 @@ export function Header() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-
-            <Link href="/seguranca" className="nav-link">
-              Segurança
-            </Link>
-
             <DropdownMenu>
               <DropdownMenuTrigger className="nav-link flex items-center">
                 Ajuda <ChevronDown className="h-4 w-4 ml-1" />
@@ -178,37 +147,67 @@ export function Header() {
                     </div>
 
                     <nav className="flex flex-col space-y-4">
-                      <Link href="/para-sua-casa" className="text-lg font-medium p-2 hover:bg-muted rounded-md">
+                      <Link
+                        href="/para-sua-casa"
+                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                      >
                         Para sua casa
                       </Link>
-                      <Link href="/empresas" className="text-lg font-medium p-2 hover:bg-muted rounded-md">
+                      <Link
+                        href="/empresas"
+                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                      >
                         Empresas
                       </Link>
-                      <Link href="/internet" className="text-lg font-medium p-2 hover:bg-muted rounded-md">
+                      <Link
+                        href="/internet"
+                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                      >
                         Internet
                       </Link>
-                      <Link href="/movel-5g" className="text-lg font-medium p-2 hover:bg-muted rounded-md">
+                      <Link
+                        href="/movel-5g"
+                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                      >
                         Móvel 5G
                       </Link>
-                      <Link href="/combos" className="text-lg font-medium p-2 hover:bg-muted rounded-md">
+                      <Link
+                        href="/combos"
+                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                      >
                         Combos
                       </Link>
-                      <Link href="/streaming" className="text-lg font-medium p-2 hover:bg-muted rounded-md">
+                      <Link
+                        href="/streaming"
+                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                      >
                         Streaming
                       </Link>
-                      <Link href="/seguranca" className="text-lg font-medium p-2 hover:bg-muted rounded-md">
+                      <Link
+                        href="/seguranca"
+                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                      >
                         Segurança
                       </Link>
-                      <Link href="/ajuda" className="text-lg font-medium p-2 hover:bg-muted rounded-md">
+                      <Link
+                        href="/ajuda"
+                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                      >
                         Ajuda
                       </Link>
                     </nav>
 
                     <div className="mt-auto">
-                      <Link href="/assine-ja" className="w-full btn-primary block text-center py-2 px-4 mb-2">
+                      <Link
+                        href="/assine-ja"
+                        className="w-full btn-primary block text-center py-2 px-4 mb-2"
+                      >
                         Assine já
                       </Link>
-                      <Link href="/area-do-cliente" className="w-full btn-secondary block text-center py-2 px-4">
+                      <Link
+                        href="/area-do-cliente"
+                        className="w-full btn-secondary block text-center py-2 px-4"
+                      >
                         Área do cliente
                       </Link>
                     </div>
