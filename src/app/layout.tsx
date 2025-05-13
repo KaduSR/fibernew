@@ -1,26 +1,28 @@
-import { Metadata } from "next";
-import "@/styles/globals.css";
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Footer } from "@/components/layout/Footer";
+import "@/styles/fonts.css";
+import "@/styles/styles1.css"
+import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
-
 export const metadata: Metadata = {
-  title: "Internet de Verdade, para Todas as Horas. | Fiber.NET",
+  title: "Internet Fibra Óptica | Fiber.NET",
   description:
-    "A Fiber.NET conecta Rio das Flores com internet fibra óptica de alta velocidade. Conheça nossos serviços e navegue sem limites!",
+    "Desfrute de uma conexão estável e ultrarrápida com a Fiber.NET – sua porta de entrada para o mundo digital.",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="pt-BR">
-      <body className={"${inter.className} antiliased"}>
-        <main> {children}</main>
+      <body className={inter.className}>
+        <Header />
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

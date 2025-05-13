@@ -1,175 +1,162 @@
-@import "tailwindcss";
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
-    :root {
-        --background: 0 0% 100%;
-        --foreground: 215 22% 25%;
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 22% 25%;
 
-        --card: 0 0% 100%;
-        --card-foreground: 215 22% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 22% 25%;
 
-        --primary: 15 95% 53%;
-        --primary-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 22% 25%;
 
-        --secondary: 30 100% 52%;
-        --secondary-foreground: 240 5.9% 10%;
+    --primary: 15 95% 53%;
+    --primary-foreground: 0 0% 98%;
 
-        --muted: 215 10% 97%;
-        --muted-foreground: 215 22% 45%;
+    --secondary: 30 100% 52%;
+    --secondary-foreground: 240 5.9% 10%;
 
-        --accent: 15 95% 95%;
-        --accent-foreground: 15 95% 53%;
+    --muted: 215 10% 97%;
+    --muted-foreground: 215 22% 45%;
 
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
+    --accent: 15 95% 95%;
+    --accent-foreground: 15 95% 53%;
 
-        --border: 215 11% 90%;
-        --input: 215 11% 90%;
-        --ring: 15 95% 53%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-        --radius: 0.5rem;
+    --border: 215 11% 90%;
+    --input: 215 11% 90%;
+    --ring: 15 95% 53%;
 
-        --fibernet-orange: 15 95% 53%;
-        --fibernet-blue: 228 22% 25%;
-    }
+    --radius: 0.5rem;
 
-    .dark {
-        --background: 215 22% 25%;
-        --foreground: 215 22% 95%;
+    --brisanet-orange: 15 95% 53%;
+    --brisanet-blue: 228 100% 26%;
+  }
 
-        --card: 215 22% 25%;
-        --card-foreground: 215 22% 95%;
+  .dark {
+    --background: 215 28% 17%;
+    --foreground: 0 0% 98%;
 
-        --popover: 215 28% 17%;
-        --popover-foreground: 0 0% 98%;
+    --card: 215 28% 17%;
+    --card-foreground: 0 0% 98%;
 
-        --primary: 15 95% 53%;
-        --primary-foreground: 0 0% 98%;
+    --popover: 215 28% 17%;
+    --popover-foreground: 0 0% 98%;
 
-        --secondary: 30 100% 52%;
-        --secondary-foreground: 240 5.9% 10%;
+    --primary: 15 95% 53%;
+    --primary-foreground: 0 0% 98%;
 
-        --muted: 215 22% 25%;
-        --muted-foreground: 215 22% 95%;
+    --secondary: 30 100% 52%;
+    --secondary-foreground: 0 0% 98%;
 
-        --accent: 15 95% 53%;
-        --accent-foreground: 0 0% 98%;
+    --muted: 215 28% 25%;
+    --muted-foreground: 215 10% 65%;
 
-        --destructive: 0 84.2% 60.2%;
-        --destructive-foreground: 0 0% 98%;
+    --accent: 215 28% 25%;
+    --accent-foreground: 0 0% 98%;
 
-        --border: 215 11% 90%;
-        --input: var(--border);
-        --ring: var(--primary);
+    --destructive: 0 74% 42%;
+    --destructive-foreground: 0 0% 98%;
 
-
-    }
+    --border: 215 28% 25%;
+    --input: 215 28% 25%;
+    --ring: 15 95% 53%;
+  }
 }
 
 @layer base {
-    * {
-        @apply border-border;
-    }
-
-    body {
-        @apply bg-background text-foreground;
-    }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
-/* Custom styles for the blob animation */
-
+/* Animations */
 @keyframes blob {
-    0% {
-        transform: translate(0px, 0px) scale(1);
-    }
-
-    33% {
-        transform: translate(30px, -50px) scale(1.1);
-    }
-
-    66% {
-        transform: translate(-20px, -20px) scale(1.2);
-    }
-
-    100% {
-        transform: translate(0px, 0px) scale(1);
-    }
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
 }
 
 @keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.8;
-    }
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
 
-/*
-    Custom styles for the blob animation
-    This is a simple animation that makes the blob move and scale
-    You can adjust the values to make it more or less pronounced
-  */
+/* Animation classes */
+.animate-blob {
+  animation: blob 7s infinite alternate;
+}
 
-  .animation-blob {
-      animation: blob 7s infinite alternate;
-  }
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
 
-  .animation-delay-2000 {
-      animation-delay: 2s;
-  }
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
 
-  .animation-delay-4000 {
-      animation-delay: 4s;
-  }
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
 
-  .animation-float {
-      animation: float 3s ease-in-out infinite;
-  }
+.animate-pulse-slow {
+  animation: pulse 3s infinite;
+}
 
-  .animation-pulse-slow {
-      animation: pulse 2s infinite;
-  }
+/* Custom styles for Brisanet clone */
+.nav-link {
+  @apply text-sm font-medium hover:text-primary transition-colors;
+}
 
-  /* Botões, links e cards */
-  .nav-link {
-      @apply text-sm font-medium hover:text-primary transition-colors;
-  }
+.nav-link-active {
+  @apply text-primary font-semibold;
+}
 
-  .nav-link-active {
-      @apply text-primary font-semibold;
-  }
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary/90 font-medium rounded-md transition-colors;
+}
 
-  .btn-primary {
-      @apply bg-primary text-white hover:bg-primary/90 font-medium rounded-md transition-colors;
-  }
+.btn-secondary {
+  @apply bg-white border border-primary text-primary hover:bg-primary/10 font-medium rounded-md transition-colors;
+}
 
-  .btn-secondary {
-      @apply bg-white border border-primary text-primary hover:bg-primary/10 font-medium rounded-md transition-colors;
-  }
+.plan-card {
+  @apply rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow;
+}
 
-  .plan-card {
-      @apply rounded-lg border border-border shadow-sm hover:shadow-md transition-shadow;
-  }
-
-  .service-icon {
-      @apply text-primary w-12 h-12;
-  }
+.service-icon {
+  @apply text-primary w-12 h-12;
+}

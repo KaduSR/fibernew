@@ -1,15 +1,28 @@
 "use client";
 
 import Link from "next/link";
-import { FileText, PhoneCall, Headphones, Monitor, MapPin } from "lucide-react";
+import {
+  FileText,
+  PhoneCall,
+  Headphones,
+  Monitor,
+  MapPin
+} from "lucide-react";
 
 const SUPPORT_OPTIONS = [
   {
     id: "invoice",
     title: "2ª via da fatura",
-    description: "Baixe sua fatura através da nossa central do assinante.",
+    description: "Baixe sua fatura através do Fibercliente.",
     icon: FileText,
-    link: "/area-do-cliente/2via",
+    link: "https://centralfiber.online/central_assinante_web/login",
+  },
+  {
+    id: "call-us",
+    title: "Entre em contato",
+    description: "Informe seus dados que ajudaremos você.",
+    icon: PhoneCall,
+    link: "https://wa.me/552424581861?text=%20Oi!%20Tenho%20interesse%20na%20internet%20da%20Fiber.NET%20.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es,%20por%20favor?%20",
   },
   {
     id: "help-center",
@@ -28,7 +41,7 @@ const SUPPORT_OPTIONS = [
   {
     id: "stores",
     title: "Nossas lojas",
-    description: "Verifique se há cobertura Fiber.NET na sua cidade.",
+    description: "Verifique se há cobertura Brisanet na sua cidade.",
     icon: MapPin,
     link: "/nossas-lojas",
   },
@@ -52,9 +65,7 @@ export function ClientSupportSection() {
               <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-3">
                 <option.icon className="h-6 w-6" />
               </div>
-              <h3 className="font-semibold text-gray-800 mb-1">
-                {option.title}
-              </h3>
+              <h3 className="font-semibold text-gray-800 mb-1">{option.title}</h3>
               <p className="text-sm text-gray-600">{option.description}</p>
               <div className="mt-3 text-primary">
                 <svg
@@ -81,8 +92,7 @@ export function ClientSupportSection() {
           <div className="flex flex-col md:flex-row items-center">
             <div className="p-8 md:p-12 text-white md:w-2/3">
               <h3 className="text-2xl font-bold mb-4">
-                Agora você pode consultar seu saldo, pacote de dados móveis e
-                chamadas.
+                Agora você pode consultar seu saldo, pacote de dados móveis e chamadas.
               </h3>
               <p className="mb-6">
                 Baixe o aplicativo e tenha acesso a todas essas funcionalidades.
@@ -107,77 +117,7 @@ export function ClientSupportSection() {
           </div>
         </div>
 
-        {/* FAQ Section */}
-        <div className="mt-16">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-800 mb-6">
-            Dúvidas sobre o Pré-Pago?
-          </h3>
-          <div className="space-y-4">
-            <div className="border border-gray-200 rounded-lg p-4 bg-white">
-              <button className="flex items-center justify-between w-full text-left">
-                <span className="font-medium text-gray-800">
-                  Dúvidas sobre o consumo de internet?
-                </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-primary"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-4 bg-white">
-              <button className="flex items-center justify-between w-full text-left">
-                <span className="font-medium text-gray-800">
-                  Dúvidas sobre ligações e SMS?
-                </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-primary"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div className="border border-gray-200 rounded-lg p-4 bg-white">
-              <button className="flex items-center justify-between w-full text-left">
-                <span className="font-medium text-gray-800">
-                  Dúvidas sobre tarifas e preços?
-                </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 text-primary"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );
