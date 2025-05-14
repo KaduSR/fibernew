@@ -11,14 +11,14 @@ export function HeroSection() {
           {/* Content */}
           <div className="w-full md:w-1/2 mt-8 md:mt-0">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-              brisamóvel
+              Fiber.NET
             </h1>
             <p className="mt-4 text-xl md:text-2xl text-gray-700">
-              Cobertura nacional para você falar e navegar de qualquer lugar
+              Cobertura total em Rio das Flores
             </p>
             <div className="mt-8">
               <Link
-                href="/movel-5g"
+                href="https://wa.me/552424581861?text=%20Oi!%20Tenho%20interesse%20na%20internet%20da%20Fiber.NET%20.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es,%20por%20favor?%20"
                 className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-white font-medium hover:bg-primary/90 transition-colors"
               >
                 Conheça os planos
@@ -39,7 +39,14 @@ export function HeroSection() {
                   <div className="rounded-lg bg-white shadow-lg h-full w-full flex items-center justify-center">
                     <div className="p-4 text-center">
                       <p className="text-gray-400 text-sm">
-                        Imagem de pessoas utilizando o serviço móvel da Brisanet
+                        Venha para a nossa empresa
+                        <Image
+                                          src="/img/logos/Imagem1.png"
+                                          alt="FiberNET"
+                                          width={100}
+                                          height={24}
+                                          className="h-6 w-auto brightness-0"
+                                        />
                       </p>
                     </div>
                   </div>

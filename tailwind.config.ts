@@ -10,6 +10,13 @@ export default {
   theme: {
     extend: {
       colors: {
+        'verde-escuro': '#031A09',
+        'verde-medio': '#316C40',
+        'verde-suave': '#abdc18',
+        'amarelo-neon': '#E2F87B',
+        'branco-suave': '#FDFFF6',
+        'orange': '#FD4900',
+        'laranja-vibrante': '#FF7F00',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -75,5 +82,5 @@ export default {
       },
     }
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: ["tailwindcssanimate"],
 } satisfies Config;

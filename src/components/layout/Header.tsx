@@ -31,7 +31,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full">
       {/* Top bar - orange */}
-      <div className="bg-primary py-1.5 px-4 text-white text-xs hidden md:flex justify-between">
+      <div className="bg-orange py-1.5 px-4 text-white text-xs hidden md:flex justify-between">
         <div className="flex items-center space-x-4">
           <Link href="/para-sua-casa" className="hover:underline">
             Para sua casa
@@ -60,7 +60,7 @@ export function Header() {
       </div>
 
       {/* Main navbar */}
-      <div className="bg-white border-b py-4 px-4 md:px-6">
+      <div className="bg-verde-suave border-b py-4 px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -122,8 +122,8 @@ export function Header() {
 
           {/* Search button */}
           <div className="flex items-center">
-            <button className="p-2 rounded-full hover:bg-muted transition-colors">
-              <Search className="h-5 w-5 text-gray-600" />
+            <button className="p-2 rounded-full hover:bg-black transition-colors">
+              <Search className="h-5 w-5 text-black" />
             </button>
 
             {/* Mobile menu button */}
@@ -131,7 +131,7 @@ export function Header() {
               <Sheet>
                 <SheetTrigger asChild>
                   <button className="p-2 rounded-full hover:bg-muted transition-colors">
-                    <AlignJustify className="h-5 w-5 text-gray-600" />
+                    <AlignJustify className="h-5 w-5 text-black" />
                   </button>
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[85%] sm:w-[385px]">
@@ -149,7 +149,7 @@ export function Header() {
                     <nav className="flex flex-col space-y-4">
                       <Link
                         href="/para-sua-casa"
-                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                        className="text-lg text-white font-medium p-2 hover:bg-muted rounded-md"
                       >
                         Para sua casa
                       </Link>

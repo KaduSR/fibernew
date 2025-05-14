@@ -87,7 +87,7 @@ export function Footer() {
             </li>
             <li>
               <Link
-                href="https://wa.me/552424581861?text=👋%20Oi!%20Tenho%20interesse%20na%20internet%20da%20Fiber.NET%20💻📶.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es,%20por%20favor?%20😊
+                href="https://wa.me/552424581861?text=%20Oi!%20Tenho%20interesse%20na%20internet%20da%20Fiber.NET%20.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es,%20por%20favor?%20
 "
                 className="text-gray-600 hover:text-primary text-sm"
               >

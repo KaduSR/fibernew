@@ -9,29 +9,29 @@ import ClientSupportSection from "@/components/home/ClientSupportSection";
 import CitySelectionModal from "@/components/modals/CitySelectionModal";
 
 export default function Home() {
-  const [showCityModal, setShowCityModal] = useState(false);
-  const [selectedCity, setSelectedCity] = useState<string | null>(null);
+  // const [showCityModal, setShowCityModal] = useState(false);
+  // const [selectedCity, setSelectedCity] = useState<string | null>(null);
 
   // Show the city selection modal when the page loads
-  useEffect(() => {
+  // useEffect(() => {
     // Only show the modal after the initial page load and if no city has been selected
-    const timer = setTimeout(() => {
-      const hasSelectedCity = localStorage.getItem("selectedCity");
-      if (!hasSelectedCity) {
-        setShowCityModal(true);
-      } else {
-        setSelectedCity(hasSelectedCity);
-      }
-    }, 1000);
+    // const timer = setTimeout(() => {
+    //   const hasSelectedCity = localStorage.getItem("selectedCity");
+    //  if (!hasSelectedCity) {
+    //    setShowCityModal(true);
+    //  } else {
+    //    setSelectedCity(hasSelectedCity);
+    //  }
+   // }, 1000);
 
-    return () => clearTimeout(timer);
-  }, []);
+ //   return () => clearTimeout(timer);
+ // }, []);
 
-  const handleCitySelect = (city: string) => {
-    setSelectedCity(city);
-    localStorage.setItem("selectedCity", city);
-    setShowCityModal(false);
-  };
+ // const handleCitySelect = (city: string) => {
+ //   setSelectedCity(city);
+ //   localStorage.setItem("selectedCity", city);
+ //   setShowCityModal(false);
+ // };
 
   return (
     <>
@@ -40,12 +40,6 @@ export default function Home() {
       <OffersSection />
       <ServicesSection />
       <ClientSupportSection />
-
-      <CitySelectionModal
-        isOpen={showCityModal}
-        onClose={() => setShowCityModal(false)}
-        onCitySelect={handleCitySelect}
-      />
     </>
   );
 }
