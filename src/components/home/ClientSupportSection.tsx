@@ -50,9 +50,9 @@ const SUPPORT_OPTIONS = [
 
 export function ClientSupportSection() {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-[hsl(var(--background))] dark:bg-[hsl(var(--background))] transition-colors">
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-[hsl(var(--foreground))] mb-6">
           Autoatendimento para clientes
         </h2>
 
@@ -61,57 +61,63 @@ export function ClientSupportSection() {
             <Link
               key={option.id}
               href={option.link}
-              className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow p-4 flex flex-col items-center text-center"
+              className="
+                bg-[hsl(var(--background))]
+                rounded-lg shadow-sm hover:shadow-md transition-shadow p-4
+                flex flex-col items-center text-center
+                border border-[hsl(var(--border))]
+                hover:border-[hsl(var(--green))]
+              "
             >
-              <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-3">
+              <div
+                className="
+                  h-12 w-12 rounded-full bg-[hsl(var(--green))]/10
+                  flex items-center justify-center text-[hsl(var(--green))]
+                  mb-3
+                "
+              >
                 <option.icon className="h-6 w-6" />
               </div>
-              <h3 className="font-semibold text-gray-800 mb-1">
+              <h3 className="font-semibold text-[hsl(var(--foreground))] mb-1">
                 {option.title}
               </h3>
-              <p className="text-sm text-gray-600">{option.description}</p>
-              <div className="mt-3 text-primary">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
+              <p className="text-sm text-[hsl(var(--foreground))/0.75]">
+                {option.description}
+              </p>
+              <div className="mt-3 text-[hsl(var(--green))]">
+                {/* ícone de seta */}
+                <svg /* ... */ />
               </div>
             </Link>
           ))}
         </div>
 
         {/* App banner */}
-        <div className="mt-16 bg-primary rounded-lg overflow-hidden">
+        <div className="mt-16 bg-[hsl(var(--green))] dark:bg-[hsl(var(--green-light))] rounded-lg overflow-hidden transition-colors">
           <div className="flex flex-col md:flex-row items-center">
-            <div className="p-8 md:p-12 text-white md:w-2/3">
+            <div className="p-8 md:p-12 text-[hsl(var(--green-foreground))] md:w-2/3">
               <h3 className="text-2xl font-bold mb-4">
                 Agora você pode baixar a sua fatura online
               </h3>
               <p className="mb-6">Entre na nossa central do assinante</p>
               <Link
                 href="/apps"
-                className="inline-flex items-center justify-center rounded-md bg-white text-primary px-5 py-2 font-medium hover:bg-gray-100 transition-colors"
+                className="
+                  inline-flex items-center justify-center rounded-md
+                  bg-[hsl(var(--background))] text-[hsl(var(--green))]
+                  px-5 py-2 font-medium hover:bg-[hsl(var(--muted))] transition-colors
+                "
               >
                 Conheça nossa central
               </Link>
             </div>
             <div className="md:w-1/3 text-center">
               {/* Placeholder for app image */}
-              <div className="bg-primary-600 h-64 flex items-center justify-center">
-                <div className="w-48 h-48 rounded-full bg-primary-400 flex items-center justify-center">
-                  <span className="text-white text-sm">
-                  <Image src="/img/paginas/centraldoassinante.png" alt="FiberNET"  width="1024" height="1024"/>
-                  </span>
+              <div
+                className="grup/card relative h-64 w-full transform gap-8 overflow-hidden rounded-2xl px-6 transition-all duration-500 md:w-[21.5rem] lg:w-">
+                <div className="w-auto h-auto rounded-full bg-[hsl(var(--green-light))] flex justify-start" style={{ position: "absolute", height: "20%", width: "20%", inset: "30px", color: "transparent" }} >
+                  {/* ícone ou imagem */}
+                  <Image src="/img/logos/Imagem1.png" alt="App" width={20} height={20} className="w-full h-full" />
                 </div>
               </div>
             </div>
