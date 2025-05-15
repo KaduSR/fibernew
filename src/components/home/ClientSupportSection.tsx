@@ -2,13 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import {
-  FileText,
-  PhoneCall,
-  Headphones,
-  Monitor,
-  MapPin
-} from "lucide-react";
+import { FileText, PhoneCall, Headphones, Monitor, MapPin } from "lucide-react";
 
 const SUPPORT_OPTIONS = [
   {
@@ -100,21 +94,39 @@ export function ClientSupportSection() {
         className="px-5 pb-[9.5rem] pt-24 md:px-6 md:pb-24 lg:pb-20 lg:pt-20 2l:px-0 bg-[hsl(var(--background))] dark:bg-[hsl(var(--background))] transition-colors"
       >
         {/* App banner */}
-        <div className="mt-16 bg-[hsl(var(--green))] dark:bg-[hsl(var(--green-light))] rounded-lg overflow-hidden transition-colors">
+        <div
+          className="px-5 pb-[9.5rem] pt-24
+    md:px-6 md:pb-24
+    lg:pb-20 lg:pt-20
+    2lg:px-0
+
+    /* Fundo com imagem */
+    bg-[url('/img/wallpaper/fundo-azul.jpg')]
+    bg-cover
+    bg-center
+    bg-no-repeat
+
+    /* Para alternar tema, se quiser overlay escuro */
+    relative
+    transition-colors
+
+    /* Arredondamento */
+    rounded-2xl"
+        >
           <div className="flex flex-col md:flex-row items-center">
             <div className="p-8 md:p-12 text-[hsl(var(--green-foreground))] md:w-2/3">
-              <h2 className="text-2xl font-bold mb-4">
+              <h2 className="text-2xl font-bold mb-4 text-white">
                 Agora você pode baixar a sua fatura online
               </h2>
-              <p className="font-figtree text-xl font-medium leading-6 text-[hsl(var(--foreground))] dark:text-[hsl(var(--foreground))] lg:w-[22rem]">
+              <p className="font-figtree text-xl font-medium leading-6 text-white lg:w-[22rem]">
                 Entre na nossa central do assinante
               </p>
               <Link
                 href="https://www.centralfiber.online/central_assinante_web/login"
                 className="
                     inline-flex items-center justify-center rounded-md
-                    bg-[hsl(var(--background))] text-[hsl(var(--green))]
-                    px-5 py-2 font-medium hover:bg-[hsl(var(--muted))] transition-colors
+                    text-white bg-green-800
+                    px-5 py-2 font-medium hover:bg-[hsl(var(--muted))] hover:text-black transition-colors
                   "
               >
                 Conheça nossa central
@@ -122,24 +134,58 @@ export function ClientSupportSection() {
             </div>
             <div className="md:w-1/3 text-center">
               {/* Placeholder for app image */}
-              <div className="grup/card relative h-64 w-full transform gap-8 overflow-hidden rounded-2xl px-6 transition-all duration-500 md:w-[21.5rem] lg:w-">
+              <div
+                className="
+    relative
+    w-full
+    h-full
+    /* Largura dinâmica */
+    md:w-[10.5rem]
+    lg:w-[18.5rem]
+    2lg:w-[12.8rem]
+
+    /* Assegura proporção 1:1 para ser sempre quadrado */
+    aspect-square
+
+    /* Arredondamento */
+    rounded-2xl
+
+    /* Espaçamento interno e overflow */
+    overflow-hidden
+
+    /* Transições */
+    transition-all
+    duration-500
+
+    /* Borda dinâmica */
+    border
+    border-[hsl(var(--border))]
+    dark:border-[hsl(var(--foreground))]
+
+    /* Fundo dinâmico */
+    bg-[hsl(var(--background))]
+    dark:bg-[hsl(var(--background))]
+
+    /* Reduz o tamanho em 10% */
+    transform
+    scale-95
+  "
+              >
                 <div
-                  className="w-auto h-auto rounded-full bg-[hsl(var(--green-light))] flex justify-start"
-                  style={{
-                    position: "absolute",
-                    height: "20%",
-                    width: "20%",
-                    inset: "30px",
-                    color: "transparent",
-                  }}
+                  className="
+    relative                /* necessário para o Image fill */
+    w-full                  /* largura total do quadrado */
+    h-full                  /* altura total do quadrado */
+    overflow-hidden         /* esconde o que ultrapassar */
+    rounded-2xl         /* suas bordas arredondadas */
+  "
                 >
-                  {/* ícone ou imagem */}
                   <Image
-                    src="/img/logos/Imagem1.png"
+                    src="/img/paginas/centraldoassinante.png"
                     alt="App"
-                    width={20}
-                    height={20}
-                    className="w-full h-full"
+                    fill /* preenche 100% do pai */
+                    className="object-cover" /* mantém proporção e cobre todo o pai */
+                    priority
                   />
                 </div>
               </div>
