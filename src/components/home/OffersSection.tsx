@@ -192,7 +192,7 @@ export function OffersSection() {
   const activePlans = PLANS[activeTab];
 
   return (
-    <section className="py-12 md:py-16 bg-gray-50">
+    <section className="py-12 md:py-16 bg-gray-50 justify-center">
       <div className="container mx-auto px-4 justify-items-center">
         <div className="flex flex-col items-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
@@ -205,7 +205,7 @@ export function OffersSection() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 rounded-md text-sm md:text-base font-medium transition-colors ${
+                className={`px-4 py-2 rounded-md text-sm md:text-base font-medium transition-colors justify-center ${
                   activeTab === tab.id
                     ? "bg-primary text-white"
                     : "bg-white text-gray-700 hover:bg-gray-100"
@@ -220,12 +220,17 @@ export function OffersSection() {
         {/* Plan cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
           {activePlans.map((plan) => (
-            <Card key={plan.id} className="overflow-hidden plan-card mx-auto">
+            <Card
+              key={plan.id}
+              className="overflow-hidden plan-card mx-auto justify-center"
+            >
               {/* Card Header with plan type and speed */}
-              <CardHeader className="bg-gray-100 pb-2 pt-4 px-4">
+              <CardHeader className="bg-gray-150 pb-2 pt-4 px-4">
                 <div className="flex flex-col">
                   <span className="text-sm text-gray-600">{plan.type}</span>
-                  <span className="text-xl font-bold text-gray-800">{plan.speed}</span>
+                  <span className="text-xl font-bold text-gray-800">
+                    {plan.speed}
+                  </span>
                   {plan.logo && (
                     <div className="mt-2">
                       <div className="h-8 w-auto flex items-center">
@@ -244,8 +249,12 @@ export function OffersSection() {
                   <p className="text-sm text-gray-600">Mais detalhes</p>
                   <div className="flex items-baseline">
                     <span className="text-gray-800 text-xl font-bold">R$</span>
-                    <span className="text-3xl font-bold text-gray-800">{plan.price.toFixed(2).replace(".", ",")}</span>
-                    <span className="text-sm text-gray-600 ml-1">{plan.priceDetails}</span>
+                    <span className="text-3xl font-bold text-gray-800">
+                      {plan.price.toFixed(2).replace(".", ",")}
+                    </span>
+                    <span className="text-sm text-gray-600 ml-1">
+                      {plan.priceDetails}
+                    </span>
                   </div>
                 </div>
 
@@ -253,7 +262,7 @@ export function OffersSection() {
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start">
                       <span className="text-primary mr-2">✓</span>
-                      <span className="text-sm text-gray-700">{feature}</span>
+                      <span className="text-sm text-gray-900">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -262,7 +271,7 @@ export function OffersSection() {
               {/* Card Footer with CTA button */}
               <CardFooter className="pt-2 pb-4 px-4">
                 <Link
-                  href={`/assine-ja?plan=${plan.id}`}
+                  href={`https://wa.me/552424581861?text=%20Oi!%20Tenho%20interesse%20na%20internet%20da%20Fiber.NET%20.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es,%20por%20favor?%20 ${plan.id}`}
                   className="w-full btn-primary py-2 text-center rounded-md"
                 >
                   Assine agora
