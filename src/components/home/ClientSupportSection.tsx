@@ -38,7 +38,7 @@ const SUPPORT_OPTIONS = [
     title: "Nossas lojas",
     description: "Verifique se há cobertura da Fiber.NET na sua cidade.",
     icon: MapPin,
-    link: "/nossas-lojas",
+    link: "https://g.co/kgs/CEcHP3J",
   },
 ];
 

@@ -8,11 +8,11 @@ import { Wifi, Tv, ArrowRight } from "lucide-react";
 
 // Plan tabs
 const PLAN_TABS = [
-  { id: "destaques", label: "Destaques" },
   { id: "internet", label: "Internet" },
-  { id: "movel", label: "Móvel" },
+  /* { id: "destaques", label: "Destaques" },  */
+  /* { id: "movel", label: "Móvel" },
   { id: "streaming", label: "Streaming" },
-  { id: "combos", label: "Combos" }
+  { id: "combos", label: "Combos" } */
 ];
 
 // Define the plan type
@@ -32,44 +32,46 @@ const PLANS: Record<string, Plan[]> = {
   destaques: [
     {
       id: 1,
-      type: "INTERNET + BRISAMUSIC",
-      speed: "500MEGA",
-      price: 89.99,
+      type: "INTERNET",
+      speed: "300MEGA",
+      price: 89.9,
       priceDetails: "/mês",
-      features: ["Wi-Fi grátis", "Melhor internet da região", "Brisamusic incluso"],
-      logo: "/img/logos/brisamusic.svg",
-      color: "bg-primary"
+      features: [
+        "Wi-Fi grátis",
+        "Conexão ultrarrápida e estável",
+        "R$10 de desconto pagando até o vencimento",
+      ],
+      logo: "/img/logos/Imagem1.png",
+      color: "bg-primary",
     },
     {
       id: 2,
-      type: "INTERNET + GLOBOPLAY",
-      speed: "700MEGA",
-      price: 99.90,
+      type: "INTERNET",
+      speed: "500MEGA",
+      price: 109.9,
       priceDetails: "/mês",
-      features: ["Wi-Fi grátis", "Melhor internet da região", "Globoplay incluso"],
-      logo: "/img/logos/globoplay.svg",
-      color: "bg-primary"
+      features: [
+        "Wi-Fi grátis",
+        "Conexão ultrarrápida e estável",
+        "R$10 de desconto pagando até o vencimento",
+      ],
+      logo: "/img/logos/Imagem1.png",
+      color: "bg-primary",
     },
     {
       id: 3,
-      type: "INTERNET + BRISAPLAY",
-      speed: "500MEGA",
-      price: 109.98,
+      type: "INTERNET",
+      speed: "600MEGA",
+      price: 119.9,
       priceDetails: "/mês",
-      features: ["Wi-Fi grátis", "Melhor internet da região", "Brisaplay incluso"],
-      logo: "/img/logos/brisaplay.svg",
-      color: "bg-primary"
+      features: [
+        "Wi-Fi grátis",
+        "Conexão ultrarrápida e estável",
+        "R$10 de desconto pagando até o vencimento",
+      ],
+      logo: "/img/logos/Imagem1.png",
+      color: "bg-primary",
     },
-    {
-      id: 4,
-      type: "INTERNET + MAX",
-      speed: "500MEGA",
-      price: 129.89,
-      priceDetails: "/mês",
-      features: ["Wi-Fi grátis", "Melhor internet da região", "MAX incluso"],
-      logo: "/img/logos/max.svg",
-      color: "bg-primary"
-    }
   ],
   internet: [
     {
@@ -79,16 +81,16 @@ const PLANS: Record<string, Plan[]> = {
       price: 69.99,
       priceDetails: "/mês",
       features: ["Wi-Fi grátis", "Atendimento 24h", "Sem franquia de dados"],
-      color: "bg-primary"
+      color: "bg-primary",
     },
     {
       id: 6,
       type: "INTERNET FIBRA",
-      speed: "500MEGA",
+      speed: "300MEGA",
       price: 79.99,
       priceDetails: "/mês",
       features: ["Wi-Fi grátis", "Atendimento 24h", "Sem franquia de dados"],
-      color: "bg-primary"
+      color: "bg-primary",
     },
     {
       id: 7,
@@ -97,8 +99,8 @@ const PLANS: Record<string, Plan[]> = {
       price: 89.99,
       priceDetails: "/mês",
       features: ["Wi-Fi grátis", "Atendimento 24h", "Sem franquia de dados"],
-      color: "bg-primary"
-    }
+      color: "bg-primary",
+    },
   ],
   movel: [
     {
@@ -107,8 +109,12 @@ const PLANS: Record<string, Plan[]> = {
       speed: "4 GIGAS",
       price: 14.99,
       priceDetails: "/mês",
-      features: ["Ligações ilimitadas", "WhatsApp ilimitado", "Roaming nacional"],
-      color: "bg-primary"
+      features: [
+        "Ligações ilimitadas",
+        "WhatsApp ilimitado",
+        "Roaming nacional",
+      ],
+      color: "bg-primary",
     },
     {
       id: 9,
@@ -116,8 +122,12 @@ const PLANS: Record<string, Plan[]> = {
       speed: "10 GIGAS",
       price: 29.99,
       priceDetails: "/mês",
-      features: ["Ligações ilimitadas", "WhatsApp ilimitado", "Roaming nacional"],
-      color: "bg-primary"
+      features: [
+        "Ligações ilimitadas",
+        "WhatsApp ilimitado",
+        "Roaming nacional",
+      ],
+      color: "bg-primary",
     },
     {
       id: 10,
@@ -125,31 +135,35 @@ const PLANS: Record<string, Plan[]> = {
       speed: "13 GIGAS",
       price: 34.99,
       priceDetails: "/mês",
-      features: ["Ligações ilimitadas", "WhatsApp ilimitado", "Roaming nacional"],
-      color: "bg-primary"
-    }
+      features: [
+        "Ligações ilimitadas",
+        "WhatsApp ilimitado",
+        "Roaming nacional",
+      ],
+      color: "bg-primary",
+    },
   ],
   streaming: [
     {
       id: 11,
       type: "STREAMING",
-      speed: "BRISAMUSIC",
+      speed: "FIBERMUSIC",
       price: 9.99,
       priceDetails: "/mês",
       features: ["Milhões de músicas", "Sem anúncios", "Acesso ilimitado"],
-      logo: "/img/logos/brisamusic.svg",
-      color: "bg-primary"
+      logo: "/img/logos/fibermusic.svg",
+      color: "bg-primary",
     },
     {
       id: 12,
       type: "STREAMING",
-      speed: "BRISAPLAY",
+      speed: "FIBERAPLAY",
       price: 29.99,
       priceDetails: "/mês",
       features: ["Filmes, séries e TV ao vivo", "Sem anúncios", "Multi-telas"],
-      logo: "/img/logos/brisaplay.svg",
-      color: "bg-primary"
-    }
+      logo: "/img/logos/fiberaplay.svg",
+      color: "bg-primary",
+    },
   ],
   combos: [
     {
@@ -159,7 +173,7 @@ const PLANS: Record<string, Plan[]> = {
       price: 99.99,
       priceDetails: "/mês",
       features: ["Internet Fibra", "Plano móvel com 10 GIGAS", "Wi-Fi grátis"],
-      color: "bg-primary"
+      color: "bg-primary",
     },
     {
       id: 14,
@@ -168,10 +182,10 @@ const PLANS: Record<string, Plan[]> = {
       price: 119.99,
       priceDetails: "/mês",
       features: ["Internet Fibra", "Brisamusic + Brisaplay", "Wi-Fi grátis"],
-      color: "bg-primary"
-    }
-  ]
-};
+      color: "bg-primary",
+    },
+  ],
+}; 
 
 export function OffersSection() {
   const [activeTab, setActiveTab] = useState("destaques");
@@ -179,7 +193,7 @@ export function OffersSection() {
 
   return (
     <section className="py-12 md:py-16 bg-gray-50">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 justify-items-center">
         <div className="flex flex-col items-center mb-10">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
             Aproveite nossas ofertas
@@ -204,9 +218,9 @@ export function OffersSection() {
         </div>
 
         {/* Plan cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
           {activePlans.map((plan) => (
-            <Card key={plan.id} className="overflow-hidden plan-card">
+            <Card key={plan.id} className="overflow-hidden plan-card mx-auto">
               {/* Card Header with plan type and speed */}
               <CardHeader className="bg-gray-100 pb-2 pt-4 px-4">
                 <div className="flex flex-col">
