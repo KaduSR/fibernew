@@ -130,7 +130,7 @@ function OffersSection() {
         </div>
       </header>
       <nav className="flex border-b border-white border-opacity-60 mb-8 max-w-[1280px] px-6 md:px-0 items-center">
-        <div role="tablist" aria-orientation="horizontal" tabindex="0" className="bg-muted no-scrollbar h-10 tranform flex-nowrap items-center justify-center overflow-y-hidden overflow-x-scroll over">
+        <div role="tablist" aria-orientation="horizontal" tabIndex={0} className="bg-muted no-scrollbar h-10 tranform flex-nowrap items-center justify-center overflow-y-hidden overflow-x-scroll over">
         <button aria-current="page" className="text-yellow-400 font-semibold text-sm pb-1 border-b-2 border-yellow-400 mr-8">
           Internet
         </button>
