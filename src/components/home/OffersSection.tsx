@@ -1,285 +1,225 @@
-"use client";
+import React from "react";
+import {
+  FaWhatsapp,
+  FaInstagram,
+  FaFacebookF,
+  FaYoutube,
+} from "react-icons/fa";
 
-import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Wifi, Tv, ArrowRight } from "lucide-react";
-
-// Plan tabs
-const PLAN_TABS = [
-  { id: "internet", label: "Internet" },
-  /* { id: "destaques", label: "Destaques" },  */
-  /* { id: "movel", label: "Móvel" },
-  { id: "streaming", label: "Streaming" },
-  { id: "combos", label: "Combos" } */
+const offers = [
+  {
+    id: 1,
+    speed: "350MEGA",
+    installation: "Pagamento somente da primeira na instalação",
+    fiber: "100% fibra óptica",
+    wifi: "WI-Fi grátis",
+    download: "Download de 300 Mega",
+    upload: "Upload de 150 Mega",
+    price: "R$ 89,90",
+    discount: 10.00,
+    products: [
+      {
+        alt: "Ícone do aplicativo Whatsapp em fundo Verde",
+        icon: <FaWhatsapp className="text-white" />,
+      },
+      {
+        alt: "Ícone do aplicativo Instagram em fundo Verde",
+        icon: <FaInstagram className="text-white" />,
+      },
+      {
+        alt: "Ícone do aplicativo Facebook em fundo Verde",
+        icon: <FaFacebookF className="text-white" />,
+      },
+      {
+        alt: "Ícone do aplicativo Youtube em fundo Verde",
+        icon: <FaYoutube className="text-white" />,
+      },
+    ],
+  },
+  {
+    id: 2,
+    speed: "500MEGA",
+    installation: "Pagamento somente da primeira na instalação",
+    fiber: "100% fibra óptica",
+    wifi: "WI-Fi grátis",
+    download: "Download de 500 Mega",
+    upload: "Upload de 250 Mega",
+    price: "R$ 109,90",
+    discount: 10.00,
+    products: [
+      {
+        alt: "Ícone do aplicativo Whatsapp em fundo Verde",
+        icon: <FaWhatsapp className="text-white" />,
+      },
+      {
+        alt: "Ícone do aplicativo Instagram em fundo Verde",
+        icon: <FaInstagram className="text-white" />,
+      },
+      {
+        alt: "Ícone do aplicativo Facebook em fundo Verde",
+        icon: <FaFacebookF className="text-white" />,
+      },
+      {
+        alt: "Ícone do aplicativo Youtube em fundo Verde",
+        icon: <FaYoutube className="text-white" />,
+      },
+    ],
+  },
+  {
+    id: 3,
+    speed: "600 MEGA",
+    installation: "Pagamento somente da primeira na instalação",
+        fiber: "100% fibra óptica",
+        wifi: "WI-Fi grátis",
+        download: "Download de 600 Mega",
+    upload: "Upload de 300 Mega",
+    price: "R$ 119,90",
+    discount: 10.00,
+    products: [
+      {
+        alt: "Ícone do aplicativo Whatsapp em fundo Verde",
+        icon: <FaWhatsapp className="text-white" />,
+      },
+      {
+        alt: "Ícone do aplicativo Instagram em fundo Verde",
+        icon: <FaInstagram className="text-white" />,
+      },
+      {
+        alt: "Ícone do aplicativo Facebook em fundo Verde",
+        icon: <FaFacebookF className="text-white" />,
+      },
+      {
+        alt: "Ícone do aplicativo Youtube em fundo Verde",
+        icon: <FaYoutube className="text-white" />,
+      },
+    ],
+  },
 ];
 
-// Define the plan type
-type Plan = {
-  id: number;
-  type: string;
-  speed: string;
-  price: number;
-  priceDetails: string;
-  features: string[];
-  logo?: string;
-  color: string;
-};
-
-// Plan offerings
-const PLANS: Record<string, Plan[]> = {
-  destaques: [
-    {
-      id: 1,
-      type: "INTERNET",
-      speed: "300MEGA",
-      price: 89.9,
-      priceDetails: "/mês",
-      features: [
-        "Wi-Fi grátis",
-        "Conexão ultrarrápida e estável",
-        "R$10 de desconto pagando até o vencimento",
-      ],
-      logo: "/img/logos/Imagem1.png",
-      color: "bg-primary",
-    },
-    {
-      id: 2,
-      type: "INTERNET",
-      speed: "500MEGA",
-      price: 109.9,
-      priceDetails: "/mês",
-      features: [
-        "Wi-Fi grátis",
-        "Conexão ultrarrápida e estável",
-        "R$10 de desconto pagando até o vencimento",
-      ],
-      logo: "/img/logos/Imagem1.png",
-      color: "bg-primary",
-    },
-    {
-      id: 3,
-      type: "INTERNET",
-      speed: "600MEGA",
-      price: 119.9,
-      priceDetails: "/mês",
-      features: [
-        "Wi-Fi grátis",
-        "Conexão ultrarrápida e estável",
-        "R$10 de desconto pagando até o vencimento",
-      ],
-      logo: "/img/logos/Imagem1.png",
-      color: "bg-primary",
-    },
-  ],
-  internet: [
-    {
-      id: 5,
-      type: "INTERNET FIBRA",
-      speed: "350MEGA",
-      price: 69.99,
-      priceDetails: "/mês",
-      features: ["Wi-Fi grátis", "Atendimento 24h", "Sem franquia de dados"],
-      color: "bg-primary",
-    },
-    {
-      id: 6,
-      type: "INTERNET FIBRA",
-      speed: "300MEGA",
-      price: 79.99,
-      priceDetails: "/mês",
-      features: ["Wi-Fi grátis", "Atendimento 24h", "Sem franquia de dados"],
-      color: "bg-primary",
-    },
-    {
-      id: 7,
-      type: "INTERNET FIBRA",
-      speed: "700MEGA",
-      price: 89.99,
-      priceDetails: "/mês",
-      features: ["Wi-Fi grátis", "Atendimento 24h", "Sem franquia de dados"],
-      color: "bg-primary",
-    },
-  ],
-  movel: [
-    {
-      id: 8,
-      type: "MÓVEL 5G",
-      speed: "4 GIGAS",
-      price: 14.99,
-      priceDetails: "/mês",
-      features: [
-        "Ligações ilimitadas",
-        "WhatsApp ilimitado",
-        "Roaming nacional",
-      ],
-      color: "bg-primary",
-    },
-    {
-      id: 9,
-      type: "MÓVEL 5G",
-      speed: "10 GIGAS",
-      price: 29.99,
-      priceDetails: "/mês",
-      features: [
-        "Ligações ilimitadas",
-        "WhatsApp ilimitado",
-        "Roaming nacional",
-      ],
-      color: "bg-primary",
-    },
-    {
-      id: 10,
-      type: "MÓVEL 5G",
-      speed: "13 GIGAS",
-      price: 34.99,
-      priceDetails: "/mês",
-      features: [
-        "Ligações ilimitadas",
-        "WhatsApp ilimitado",
-        "Roaming nacional",
-      ],
-      color: "bg-primary",
-    },
-  ],
-  streaming: [
-    {
-      id: 11,
-      type: "STREAMING",
-      speed: "FIBERMUSIC",
-      price: 9.99,
-      priceDetails: "/mês",
-      features: ["Milhões de músicas", "Sem anúncios", "Acesso ilimitado"],
-      logo: "/img/logos/fibermusic.svg",
-      color: "bg-primary",
-    },
-    {
-      id: 12,
-      type: "STREAMING",
-      speed: "FIBERAPLAY",
-      price: 29.99,
-      priceDetails: "/mês",
-      features: ["Filmes, séries e TV ao vivo", "Sem anúncios", "Multi-telas"],
-      logo: "/img/logos/fiberaplay.svg",
-      color: "bg-primary",
-    },
-  ],
-  combos: [
-    {
-      id: 13,
-      type: "COMBO COMPLETO",
-      speed: "500MEGA + MÓVEL 5G",
-      price: 99.99,
-      priceDetails: "/mês",
-      features: ["Internet Fibra", "Plano móvel com 10 GIGAS", "Wi-Fi grátis"],
-      color: "bg-primary",
-    },
-    {
-      id: 14,
-      type: "COMBO PREMIUM",
-      speed: "700MEGA + STREAMING",
-      price: 119.99,
-      priceDetails: "/mês",
-      features: ["Internet Fibra", "Brisamusic + Brisaplay", "Wi-Fi grátis"],
-      color: "bg-primary",
-    },
-  ],
-}; 
-
-export function OffersSection() {
-  const [activeTab, setActiveTab] = useState("destaques");
-  const activePlans = PLANS[activeTab];
+function OffersSection() {
+  return (
+    <section id="offers-section-home" className="max-w-[1440px] mx-auto py-24">
+      <header className="flex flex-col md:flex-row md:justify-between md:items-center mb-6 px-6 md:px-0">
+        <h1 className="text-3xl md:text-4xl font-extrabold leading-tight max-w-lg">
+          Aproveite as nossas ofertas
+        </h1>
+        <div className="mt-4 md:mt-0 text-right">
+          <p className="text-xs text-white mb-1">Ofertas válidas para:</p>
+          <button
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            className="text-yellow-400 font-semibold underline flex items-center justify-end gap-1 text-sm"
+            type="button"
+          >
+            Rio das Flores
+            <svg
+              aria-hidden="true"
+              className="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 9l-7 7-7-7"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></path>
+            </svg>
+          </button>          
+        </div>
+      </header>
+      <nav className="flex border-b border-white border-opacity-60 mb-8 max-w-[1280px] px-6 md:px-0 items-center">
+        <div role="tablist" aria-orientation="horizontal" tabindex="0" className="bg-muted no-scrollbar h-10 tranform flex-nowrap items-center justify-center overflow-y-hidden overflow-x-scroll over">
+        <button aria-current="page" className="text-yellow-400 font-semibold text-sm pb-1 border-b-2 border-yellow-400 mr-8">
+          Internet
+        </button>
+        </div>
+      </nav>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-[1280px] mx-auto px-6 md:px-6">
+{offers.map((offer) => {
+  // Parse price as number, remove 'R$' and spaces, and replace ',' with '.' if needed
+  const priceNumber = Number(
+    offer.price.replace('R$', '').replace(/\s/g, '').replace(',', '.')
+  );
+  const discountedPrice = (priceNumber - offer.discount).toFixed(2);
 
   return (
-    <section className="py-12 md:py-16 bg-gray-50 justify-center">
-      <div className="container mx-auto px-4 justify-items-center">
-        <div className="flex flex-col items-center mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
-            Aproveite nossas ofertas
-          </h2>
-
-          {/* Tabs */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4">
-            {PLAN_TABS.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 rounded-md text-sm md:text-base font-medium transition-colors justify-center ${
-                  activeTab === tab.id
-                    ? "bg-primary text-white"
-                    : "bg-white text-gray-700 hover:bg-gray-100"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
+    <article
+      key={offer.id}
+      aria-label={`Plano ${offer.speed} de internet`}
+    >
+      <div>
+        <div className="flex items-center gap-1 mb-2 text-[10px] font-semibold uppercase text-opacity-80 ">
+          <i className="fas fa-wi-fi"></i>
+          INTERNET
         </div>
-
-        {/* Plan cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
-          {activePlans.map((plan) => (
-            <Card
-              key={plan.id}
-              className="overflow-hidden plan-card mx-auto justify-center"
-            >
-              {/* Card Header with plan type and speed */}
-              <CardHeader className="bg-gray-150 pb-2 pt-4 px-4">
-                <div className="flex flex-col">
-                  <span className="text-sm text-gray-600">{plan.type}</span>
-                  <span className="text-xl font-bold text-gray-800">
-                    {plan.speed}
-                  </span>
-                  {plan.logo && (
-                    <div className="mt-2">
-                      <div className="h-8 w-auto flex items-center">
-                        <span className="text-sm text-primary font-medium">
-                          Produto Incluído
-                        </span>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </CardHeader>
-
-              {/* Card Content with price and features */}
-              <CardContent className="pt-4 px-4">
-                <div className="mb-4">
-                  <p className="text-sm text-gray-600">Mais detalhes</p>
-                  <div className="flex items-baseline">
-                    <span className="text-gray-800 text-xl font-bold">R$</span>
-                    <span className="text-3xl font-bold text-gray-800">
-                      {plan.price.toFixed(2).replace(".", ",")}
-                    </span>
-                    <span className="text-sm text-gray-600 ml-1">
-                      {plan.priceDetails}
-                    </span>
-                  </div>
-                </div>
-
-                <ul className="space-y-2">
-                  {plan.features.map((feature) => (
-                    <li key={feature} className="flex items-start">
-                      <span className="text-primary mr-2">✓</span>
-                      <span className="text-sm text-gray-900">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-
-              {/* Card Footer with CTA button */}
-              <CardFooter className="pt-2 pb-4 px-4">
-                <Link
-                  href={`https://wa.me/552424581861?text=%20Oi!%20Tenho%20interesse%20na%20internet%20da%20Fiber.NET%20.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es,%20por%20favor?%20 ${plan.id}`}
-                  className="w-full btn-primary py-2 text-center rounded-md"
-                >
-                  Assine agora
-                </Link>
-              </CardFooter>
-            </Card>
+        <h2 className="text-xl font-extrabold b-3 border-b border-white border-opacity-60 pb-1 max-w-max ">
+          {offer.speed}
+        </h2>
+        <ul className="text-xs space-y-1 mb-3 text-white text-opacity-90">
+          <li className="flex items-center gap-2">
+            <i className="fas fa-cog text-[10px]"></i>
+            {offer.installation}
+          </li>
+          <li className="flex items-center gap-2">
+            <i className="fas fa-fiber-optic text-[10px]"></i>
+            {offer.fiber}
+          </li>
+          <li className="flex items-center gap-2">
+            <i className="fas fa-wifi text-[10px]"></i>
+            {offer.wifi}
+          </li>
+          <li className="flex items-center gap-2">
+            <i className="fas fa-download text-[10px]"></i>
+            {offer.download}
+          </li>
+          <li className="flex items-center gap-2">
+            <i className="fas fa-upload text-[10px]"></i>
+            {offer.upload}
+          </li>
+        </ul>
+        <p className="text-[11px] mb-3 text-white text-opacity-90">
+          Aproveite esses serviços com a nossa internet de alta velocidade.
+        </p>
+        <div className="flex gap-2 mb-5">
+          {offer.products.map((product, idx) => (
+            <span key={idx} title={product.alt} className="rounded bg-green-600 p-1">
+              {product.icon}
+            </span>
           ))}
         </div>
+        <button
+          className="bg-yellow-400 font-semibold text-sm flex items-center gap-1 mb-6"
+          type="button"
+        >
+          Saiba mais
+          <i className="fas fa-plus-circle"></i>
+        </button>
+      </div>
+      <div>
+        <p className="text-xs text-green-400 mb-1">
+          Pagando até a data de vencimento, desconto de R$ {offer.discount.toFixed(2).replace('.', ',')}
+        </p>
+        <p className="text-2xl font-semibold mb-4">
+          R$
+          <span className="text-3xl line-through opacity-60 mr-2">
+            {priceNumber.toFixed(2).replace('.', ',')}
+          </span>
+          <span className="text-3xl font-semibold">
+            {discountedPrice.replace('.', ',')}
+          </span>
+          <span className="font-normal text-base">
+            /mês
+          </span>
+        </p>
+        <button className="w-full bg-yellow-400 text-black font-bold py-3 rounded-b-xl hover:bg-yellow-500 transition" type="button">
+          Assinar agora
+        </button>
+      </div>
+    </article>
+  );
+})}
       </div>
     </section>
   );
