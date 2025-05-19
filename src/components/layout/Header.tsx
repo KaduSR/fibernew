@@ -2,36 +2,47 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-import {
-  Menu,
-  Search,
-  ChevronDown,
-  User,
-  X,
-  AlignJustify
-} from "lucide-react";
+import { useEffect, useState } from "react";
+import { Menu, Search, ChevronDown, User, X, AlignJustify } from "lucide-react";
 
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 export function Header() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== "undefined") {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY && currentScrollY > 50) {
+          setIsVisible(false);
+        } else {
+          setIsVisible(true);
+        }
+        setLastScrollY(currentScrollY);
+      }
+    };
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+  
   return (
-    <header className="sticky top-0 z-50 w-full">
-      {/* Top bar - orange */}
-      <div className="bg-orange py-1.5 px-4 text-white text-xs hidden md:flex justify-between">
+    <header
+      className={`w-full z-10 transition-transform ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      } bg-white dark:bg-background-dark`}
+    >
+      {/* Top bar - green */}
+      <div className="bg-green- py-3 px-5 text-black text-ls hidden md:flex justify-between">
         <div className="flex items-center space-x-4">
           <Link href="/para-sua-casa" className="hover:underline">
             Para sua casa
@@ -43,7 +54,12 @@ export function Header() {
             Parceiros
           </Link>
         </div>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-4 ">
+          <div
+            className=" dark:bg-white w-[1px] h-10 bg-gray-800"
+            data-orientation="vertical"
+            role="none"
+          ></div>
           <Link
             href="https://wa.me/552424581861?text=%20Oi!%20Tenho%20interesse%20na%20internet%20da%20Fiber.NET%20.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es,%20por%20favor?%20"
             className="hover:underline"
@@ -60,13 +76,13 @@ export function Header() {
       </div>
 
       {/* Main navbar */}
-      <div className="bg-verde-suave border-b py-4 px-4 md:px-6">
+      <div className="border-b py-4 px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/img/logos/Imagem1.png"
-              alt="Brisanet"
+              alt="FiberNET"
               width={120}
               height={32}
               className="h-8 w-auto"
@@ -74,7 +90,12 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex justify-start space-x-6 w-full">
+          <nav className="hidden md:flex justify-end space-x-11 w-full h-full">
+            <div
+              className=" dark:bg-white w-[1px] h-5 bg-gray-800"
+              data-orientation="horizontal"
+              role="none"
+            ></div>
             <DropdownMenu>
               <DropdownMenuTrigger className="nav-link flex items-center">
                 Internet <ChevronDown className="h-4 w-4 ml-1" />
@@ -121,7 +142,8 @@ export function Header() {
           </nav>
 
           {/* Search button */}
-          <div className="flex items-center">
+          <div className="flex items-center space-x-11">
+
             <button className="p-2 rounded-full hover:bg-black transition-colors">
               <Search className="h-5 w-5 text-black" />
             </button>
@@ -138,64 +160,53 @@ export function Header() {
                   <div className="flex flex-col h-full">
                     <div className="flex items-center justify-between mb-6">
                       <Image
-                        src="/img/logos/brisanet-logo.svg"
-                        alt="Brisanet"
+                        src="/img/logos/Imagem1.png"
+                        alt="FiberNET"
                         width={120}
                         height={32}
                         className="h-8 w-auto"
                       />
                     </div>
-
-                    <nav className="flex flex-col space-y-4">
-                      <Link
-                        href="/para-sua-casa"
-                        className="text-lg text-white font-medium p-2 hover:bg-muted rounded-md"
-                      >
-                        Para sua casa
-                      </Link>
-                      <Link
-                        href="/empresas"
-                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
-                      >
-                        Empresas
-                      </Link>
-                      <Link
-                        href="/internet"
-                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
-                      >
-                        Internet
-                      </Link>
-                      <Link
-                        href="/movel-5g"
-                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
-                      >
-                        Móvel 5G
-                      </Link>
-                      <Link
-                        href="/combos"
-                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
-                      >
-                        Combos
-                      </Link>
-                      <Link
-                        href="/streaming"
-                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
-                      >
-                        Streaming
-                      </Link>
-                      <Link
-                        href="/seguranca"
-                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
-                      >
-                        Segurança
-                      </Link>
-                      <Link
-                        href="/ajuda"
-                        className="text-lg font-medium p-2 hover:bg-muted rounded-md"
-                      >
-                        Ajuda
-                      </Link>
-                    </nav>
+                    <div className="justify-end container">
+                      <nav className="flex flex-col space-y-4">
+                        <Link
+                          href="/para-sua-casa"
+                          className="text-lg text-white font-medium p-2 hover:bg-muted rounded-md"
+                        >
+                          Para sua casa
+                        </Link>
+                        <Link
+                          href="/empresas"
+                          className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                        >
+                          Empresas
+                        </Link>
+                        <Link
+                          href="/internet"
+                          className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                        >
+                          Internet
+                        </Link>
+                        <Link
+                          href="/streaming"
+                          className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                        >
+                          Streaming
+                        </Link>
+                        <Link
+                          href="/seguranca"
+                          className="text-lg font-medium p-2 hover:bg-muted rounded-md"
+                        >
+                          Segurança
+                        </Link>
+                        <Link
+                          href="/ajuda"
+                          className="text-lg font-medium p-2 hover:bg-muted rounded-md space-x-11"
+                        >
+                          Ajuda
+                        </Link>
+                      </nav>
+                    </div>
 
                     <div className="mt-auto">
                       <Link
