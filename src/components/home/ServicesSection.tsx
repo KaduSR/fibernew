@@ -5,33 +5,33 @@ import Link from "next/link";
 
 const SERVICES = [
   {
-    id: "brisanet-5g",
-    title: "Brisanet 4G/5G",
-    description: "Chegou a tecnologia 5G na Brisanet: muito mais rápida!",
+    id: "Fiber.NET-5g",
+    title: "Fiber.NET 4G/5G",
+    description: "Chegou a tecnologia 5G na Fiber.NET: muito mais rápida!",
     icon: Smartphone,
-    link: "/movel-5g"
+    link: "/movel-5g",
   },
   {
     id: "brisamusic",
     title: "Brisamusic",
     description: "Ouça suas músicas preferidas onde e quando quiser.",
     icon: Film,
-    link: "/streaming/brisamusic"
+    link: "/streaming/brisamusic",
   },
   {
     id: "brisaplay",
     title: "Brisaplay",
     description: "Filmes, séries e canais de TV ao vivo",
     icon: Film,
-    link: "/streaming/brisaplay"
+    link: "/streaming/brisaplay",
   },
   {
     id: "conecta-plus",
     title: "Conecta+",
     description: "Serviço de atendimento especializado",
     icon: Globe,
-    link: "/conecta-plus"
-  }
+    link: "/conecta-plus",
+  },
 ];
 
 export function ServicesSection() {
@@ -43,18 +43,25 @@ export function ServicesSection() {
             Conheça nossos serviços
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A Brisanet tem diversos serviços para você e sua família aproveitar
+            A Fiber.NET tem diversos serviços para você e sua família aproveitar
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {SERVICES.map((service) => (
-            <div key={service.id} className="bg-white rounded-lg p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <div
+              key={service.id}
+              className="bg-white rounded-lg p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+            >
               <div className="mb-4 h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center text-primary">
                 <service.icon className="h-8 w-8" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">{service.title}</h3>
-              <p className="text-gray-600 text-sm mb-4">{service.description}</p>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                {service.title}
+              </h3>
+              <p className="text-gray-600 text-sm mb-4">
+                {service.description}
+              </p>
               <Link
                 href={service.link}
                 className="inline-flex items-center text-primary text-sm font-medium"

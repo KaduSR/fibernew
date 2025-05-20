@@ -3,7 +3,12 @@
 import { useState } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
@@ -13,7 +18,11 @@ type CitySelectionModalProps = {
   onCitySelect: (city: string) => void;
 };
 
-export function CitySelectionModal({ isOpen, onClose, onCitySelect }: CitySelectionModalProps) {
+export function CitySelectionModal({
+  isOpen,
+  onClose,
+  onCitySelect,
+}: CitySelectionModalProps) {
   const [cityInput, setCityInput] = useState("");
 
   const handleCitySubmit = (e: React.FormEvent) => {
@@ -42,7 +51,7 @@ export function CitySelectionModal({ isOpen, onClose, onCitySelect }: CitySelect
               <div className="relative h-40 w-48 md:h-[13.35rem] md:w-[16.37rem] xl:h-[17.36rem] xl:w-[21.29rem]">
                 <Image
                   src="/img/maps/brazil-map.svg"
-                  alt="Mapa do Brasil com destaques para cobertura Brisanet"
+                  alt="Mapa do Brasil com destaques para cobertura Fiber.NET"
                   width={340}
                   height={277}
                   className="h-full w-full object-contain"
@@ -55,14 +64,17 @@ export function CitySelectionModal({ isOpen, onClose, onCitySelect }: CitySelect
             {/* Form content */}
             <div className="mt-6 flex flex-col md:mt-0">
               <h2 className="text-2xl font-semibold leading-6 text-gray-700 md:w-[13.5rem] md:text-[2rem] md:leading-8 xl:w-full xl:text-4xl">
-                Bem vindo ao site Brisanet!
+                Bem vindo ao site Fiber.NET!
               </h2>
               <p className="mt-2 text-sm leading-4 text-gray-600 md:w-[20.25rem] md:text-lg md:leading-5 xl:w-[26.5rem]">
-                Informe a sua cidade para que possamos personalizar as ofertas de acordo com
-                disponibilidade para a sua região
+                Informe a sua cidade para que possamos personalizar as ofertas
+                de acordo com disponibilidade para a sua região
               </p>
 
-              <form onSubmit={handleCitySubmit} className="mt-6 md:w-[20.75rem] xl:mt-4 xl:w-[26.625rem]">
+              <form
+                onSubmit={handleCitySubmit}
+                className="mt-6 md:w-[20.75rem] xl:mt-4 xl:w-[26.625rem]"
+              >
                 <div className="relative">
                   <div className="relative group flex items-center rounded-lg border px-3 focus-within:border-primary">
                     <Input

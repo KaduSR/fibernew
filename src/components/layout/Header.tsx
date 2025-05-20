@@ -3,17 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Menu, Search, ChevronDown, User, X, AlignJustify } from "lucide-react";
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { relative } from "path";
 
 export function Header() {
   const [isVisible, setIsVisible] = useState(true);
@@ -119,9 +108,9 @@ export function Header() {
                         <path
                           d="M10.834 4.333L6.5 8.666 2.167 4.333"
                           stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                       </svg>
                     </button>
@@ -206,9 +195,9 @@ export function Header() {
                         <path
                           d="M10.834 4.333L6.5 8.666 2.167 4.333"
                           stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                       </svg>
                     </button>
@@ -232,9 +221,9 @@ export function Header() {
                         <path
                           d="M10.834 4.333L6.5 8.666 2.167 4.333"
                           stroke="currentColor"
-                          stroke-width="1.5"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
+                          strokeWidth="1.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
                         ></path>
                       </svg>
                     </button>
@@ -286,9 +275,9 @@ export function Header() {
                     <path
                       d="M10.834 4.333L6.5 8.666 2.167 4.333"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                 </button>
@@ -339,9 +328,9 @@ export function Header() {
                     <path
                       d="M10.834 4.333L6.5 8.666 2.167 4.333"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                 </button>
@@ -370,9 +359,9 @@ export function Header() {
                     <path
                       d="M10.834 4.333L6.5 8.666 2.167 4.333"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                 </button>
@@ -412,9 +401,9 @@ export function Header() {
                     <path
                       d="M10.834 4.333L6.5 8.666 2.167 4.333"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                 </button>
@@ -442,16 +431,16 @@ export function Header() {
                   <path
                     d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></path>
                   <path
                     d="M19.0004 19.0004L14.6504 14.6504"
                     stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   ></path>
                 </svg>
               </button>

@@ -194,7 +194,7 @@ export function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-4">Redes sociais</h3>
           <div className="flex gap-3">
-            {/*  <Link href="https://facebook.com/brisanet" className="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors" aria-label="Facebook">
+            {/*  <Link href="https://facebook.com/Fiber.NET" className="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors" aria-label="Facebook">
               <Facebook className="h-5 w-5" />
             </Link> */}
             <Link
@@ -204,10 +204,10 @@ export function Footer() {
             >
               <Instagram className="h-5 w-5" />
             </Link>
-            {/* } <Link href="https://linkedin.com/company/brisanet" className="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors" aria-label="LinkedIn">
+            {/* } <Link href="https://linkedin.com/company/Fiber.NET" className="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5" />
             </Link>
-            <Link href="https://youtube.com/brisanet" className="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors" aria-label="YouTube">
+            <Link href="https://youtube.com/Fiber.NET" className="w-9 h-9 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors" aria-label="YouTube">
               <Youtube className="h-5 w-5" />
             </Link> */}
           </div>

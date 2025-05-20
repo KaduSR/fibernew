@@ -4,6 +4,7 @@ import "@/styles/fonts.css";
 import "@/styles/styles1.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import FloatingButton from "@/components/layout/FloatingButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
           </nav>
           <Header />
           <main>{children}</main>
+          <FloatingButton/>
           <Footer />
         </div>
       </body>
