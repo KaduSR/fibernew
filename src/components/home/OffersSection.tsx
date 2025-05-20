@@ -120,7 +120,7 @@ export function OffersSection() {
             1024: { slidesPerView: 3 },
           }}
           pagination={{ clickable: false }}
-          className="max-w-[1440px]"
+          className="max-w-[1440px] justify-center"
         >
           {offers.map((offer) => {
             const priceNumber = Number(
@@ -129,8 +129,8 @@ export function OffersSection() {
             const discounted = (priceNumber - offer.discount).toFixed(2);
 
             return (
-              <SwiperSlide key={offer.id} className="max-w-[344px] !w-auto">
-                <div className="relative rounded-xl bg-white dark:bg-gray-800 p-6 shadow-lg dark:border dark:border-gray-700 flex flex-col h-full">
+              <SwiperSlide key={offer.id} className="max-w-[344px]">
+                <div className="bg-white dark:bg-gray-800 p-6 shadow-lg dark:border dark:border-gray-700  flex-col">
                   {/* Cabeçalho */}
                   <div className="mb-4">
                     <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-white">
