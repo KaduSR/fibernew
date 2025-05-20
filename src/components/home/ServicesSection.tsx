@@ -5,11 +5,11 @@ import Link from "next/link";
 
 const SERVICES = [
   {
-    id: "Fiber.NET-5g",
-    title: "Fiber.NET 4G/5G",
+    id: "Fiber.NET",
+    title: "Fiber.NET",
     description: "Chegou a tecnologia 5G na Fiber.NET: muito mais rápida!",
-    icon: Smartphone,
-    link: "/movel-5g",
+    icon: Wifi,
+    link: "/",
   },
   {
     id: "brisamusic",
@@ -36,7 +36,7 @@ const SERVICES = [
 
 export function ServicesSection() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white ">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">

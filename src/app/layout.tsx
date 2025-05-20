@@ -5,6 +5,7 @@ import "@/styles/styles1.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingButton from "@/components/layout/FloatingButton";
+import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,22 +22,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="pt-BR"
-      className="min-h-screen__variable7d5794 __variable_31b03a __variable_b539cb light"
-    >
+    <html lang="pt-BR" className="suppressHydrationWarning">
       <body className="overflow-x-hidden">
-        <div className="relative flex min-h-screen flex-col">
-          <nav className="sticky top-0 z-10 hidden w-screen min-w-[375px] bg-green-500 dark:bg-background-dark 2md:flex">
-            <div className="container flex flex-row items-center justify-between px-6 2lg:px-0">
-              
+        <ThemeProvider attribute={"class"}>
+          <div className="relative flex min-h-screen flex-col">
+            <nav className="sticky top-0 z-10 hidden w-screen min-w-[375px] bg-green-500 dark:bg-background-dark 2md:flex">
+              <div className="container flex flex-row items-center justify-between px-6 2lg:px-0"></div>
+            </nav>
+            <Header />
+            <main>{children}</main>
+            <FloatingButton />
+            <Footer />
           </div>
-          </nav>
-          <Header />
-          <main>{children}</main>
-          <FloatingButton/>
-          <Footer />
-        </div>
+        </ThemeProvider>
       </body>
     </html>
   );
