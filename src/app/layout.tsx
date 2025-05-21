@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/fonts.css";
 import "@/styles/styles1.css";
+import "@/styles/styles2.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import FloatingButton from "@/components/layout/FloatingButton";
+import FloatingButton from "@/components/modals/FloatingButton";
 import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });

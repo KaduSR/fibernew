@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+
+
 export function Header() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -39,14 +41,14 @@ export function Header() {
               <span className="sr-only">
                 Link para redirecionar para a tela inicial do site
               </span>
-                <Image
-                  src="/img/logos/Imagem1.png"
-                  alt="Logo"
-                  width="132"
-                  height="24"
-                  className="object-cover" /* mantém proporção e cobre todo o pai */
-                  priority
-                />
+              <Image
+                src="/img/logos/Imagem1.png"
+                alt="Logo"
+                width="132"
+                height="24"
+                className="object-cover" /* mantém proporção e cobre todo o pai */
+                priority
+              />
             </Link>
             <nav
               aria-label="Main"

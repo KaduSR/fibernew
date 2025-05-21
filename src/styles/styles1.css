@@ -286,14 +286,14 @@ html {
 }
 
 html:root {
-    --av-floating-margin-bottom: 185px;
-    --av-floating-margin-right: 30px;
+    --av-floating-margin-bottom: 175px;
+    --av-floating-margin-right: 40px;
     --av-color-primary: #f03200
 }
 
 html:root app-auvious-widget[data-av-device=mobile] {
     --av-floating-margin-bottom: 185px;
-    --av-floating-margin-right: 42px
+    --av-floating-margin-right: 50px
 }
 
 body {
@@ -542,10 +542,6 @@ body {
 
 .invisible {
     visibility: hidden
-}
-
-.fixed {
-    position: fixed
 }
 
 .absolute {

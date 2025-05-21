@@ -213,32 +213,13 @@ export function Footer() {
           </div>
         </div>
       </div>
-
-      {/* Separator for ethical links */}
-      <div className="border-t">
-        <div className="container mx-auto px-4 py-4 flex flex-col sm:flex-row gap-4">
-          <Link
-            href="/canal-de-etica"
-            className="text-sm text-gray-600 hover:text-primary"
-          >
-            Canal de Ética
-          </Link>
-          <Link
-            href="/canal-da-mulher"
-            className="text-sm text-gray-600 hover:text-primary"
-          >
-            Canal da mulher
-          </Link>
-        </div>
-      </div>
-
       {/* Copyright bar */}
-      <div className="w-full bg-orange-500 dark:bg-green-700">
+      <div className="w-full  px-6 bg-gray-700">
         <div className="bg-primary text-white">
           <div className="container flex h-24 flex-row items-center justify-start pl-6 2lg:pl-0">
             <Link
               href="/acessibilidade"
-              className="tab-focus text-base font-medium text-white hover:underline focus:ring-white dark:text-foreground-dark dark:hover:p-2 dark:hover:text-yellow-500 dark:hover:ring-1 dark:hover:ring-yellow-200"
+              className="tab-focus text-base font-medium text-white hover:underline focus:ring-white" 
             >
               Acessibilidade
             </Link>
@@ -251,19 +232,19 @@ export function Footer() {
               </p>
             </div>
           </div>
-          <div className="bg-orange-500 px-6 dark:bg-gray-700 2lg:px-0"></div>
-          <div className="w-full bg-orange-500 dark:bg-gray-700">
+          <div className="px-6 bg-gray-700 2lg:px-0"></div>
+          <div className="w-full bg-gray-700">
             <div className="container flex h-20 flex-row items-center justify-start p-x-6 2lg:px-0">
               <Link
                 href="/"
-                className="transition-all duration-500 hover:cursor-pointer focus:outline-none focus-visible:p-2 focus-visible:ring-1 focus-visible:ring-white dark:focus-visible:ring-yellow-200"
+                className="transition-all duration-500 hover:cursor-pointer focus:outline-none focus-visible:p-2 focus-visible:ring-1 focus-visible:ring-white"
               >
                 <Image
                   src="/img/logos/Imagem1.png"
                   alt="FiberNET"
-                  width={100}
-                  height={24}
-                  className="h-6 w-auto brightness-0 invert"
+                  width={150}
+                  height={50}
+                  className="h-6 w-auto brightness-10"
                 />
               </Link>
               <p className="ml-auto select-none text-center text-sm font-medium text-white">
