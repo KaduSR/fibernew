@@ -243,12 +243,12 @@ export function Header() {
           aria-label="Main"
           data-orientation="horizontal"
           dir="ltr"
-          className="relative items-start justify-start container z-[1] hidden md:pl-6 2md:flex 2lg:pl-0"
+          className="relative items-start justify-center container z-[1] hidden md:pl-6 2md:flex 2lg:pl-0"
         >
           <div style={{ position: "relative" }}>
             <ul
               data-orientation="horizontal"
-              className="group flex flex-1 list-none items-center justify-start space-x-1 h-20"
+              className="group flex flex-1 list-none items-center justify-center space-x-1 h-20"
               dir="ltr"
             >
               <li>
@@ -264,90 +264,6 @@ export function Header() {
                 >
                   <div className="flex flex-col items-center justify-center gap-1">
                     <h2 className="">Internet</h2>
-                  </div>
-                  <span className="sr-only">Abrir contéudo</span>
-                  <svg
-                    viewBox="0 0 13 13"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="relative top-[1px] ml-1 size-4 text-gray-600 transition duration-200 group-focus-visible:text-blue-600 group-data-[state=open]:rotate-180 group-data-[state=open]:text-blue-600 dark:text-yellow-200 dark:group-focus-within:text-yellow-500 dark:group-data-[state=open]:text-yellow-500"
-                  >
-                    <path
-                      d="M10.834 4.333L6.5 8.666 2.167 4.333"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <a
-                  className="group dark:bg-gray-800 group inline-flex h-10 w-max select-none items-center justify-center rounded-md bg-transparent px-4 py-2 font-barlow text-lg font-medium leading-6 text-gray-600 hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-500 data-[first=true]:pl-0 data-[state=open]:text-blue-500 dark:text-foreground-dark dark:hover:text-yellow-500 dark:focus:text-yellow-500 dark:focus-visible:text-yellow-500 dark:data-[state=open]:text-yellow-500"
-                  href="/internet-movel-4g-5g"
-                  data-radix-collection-item=""
-                >
-                  <div className="flex flex-col items-center justify-center gap-1">
-                    <h2 className="">Móvel 5G</h2>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a
-                  className="group dark:bg-gray-800 group inline-flex h-10 w-max select-none items-center justify-center rounded-md bg-transparent px-4 py-2 font-barlow text-lg font-medium leading-6 text-gray-600 hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-500 data-[first=true]:pl-0 data-[state=open]:text-blue-500 dark:text-foreground-dark dark:hover:text-yellow-500 dark:focus:text-yellow-500 dark:focus-visible:text-yellow-500 dark:data-[state=open]:text-yellow-500"
-                  href="/combo-internet-telefonia-e-mais"
-                  data-radix-collection-item=""
-                >
-                  <div className="flex flex-col items-center justify-center gap-1">
-                    <h2 className="">Combos</h2>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <button
-                  id="radix-:Rqf1la:-trigger-streaming"
-                  data-state="closed"
-                  aria-expanded="false"
-                  aria-controls="radix-:Rqf1la:-content-streaming"
-                  className="group dark:bg-gray-800 group group inline-flex h-10 w-max select-none items-center justify-center rounded-md bg-transparent px-4 py-2 font-barlow text-lg font-medium leading-6 text-gray-600 hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-500 data-[state=open]:text-blue-500 dark:text-foreground-dark dark:hover:text-yellow-500 dark:focus:text-yellow-500 dark:focus-visible:text-yellow-500 dark:data-[state=open]:text-yellow-500"
-                  data-first="true"
-                  tabIndex={0}
-                  data-radix-collection-item=""
-                >
-                  <div className="flex flex-col items-center justify-center gap-1">
-                    <h2 className="">Streaming</h2>
-                  </div>
-                  <span className="sr-only">Abrir contéudo</span>
-                  <svg
-                    viewBox="0 0 13 13"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="relative top-[1px] ml-1 size-4 text-gray-600 transition duration-200 group-focus-visible:text-blue-600 group-data-[state=open]:rotate-180 group-data-[state=open]:text-blue-600 dark:text-yellow-200 dark:group-focus-within:text-yellow-500 dark:group-data-[state=open]:text-yellow-500"
-                  >
-                    <path
-                      d="M10.834 4.333L6.5 8.666 2.167 4.333"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    ></path>
-                  </svg>
-                </button>
-              </li>
-              <li>
-                <button
-                  id="radix-:Rqf1la:-trigger-servicos"
-                  data-state="closed"
-                  aria-expanded="false"
-                  aria-controls="radix-:Rqf1la:-content-servicos"
-                  className="group dark:bg-gray-800 group group inline-flex h-10 w-max select-none items-center justify-center rounded-md bg-transparent px-4 py-2 font-barlow text-lg font-medium leading-6 text-gray-600 hover:text-blue-600 focus:text-blue-600 focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-blue-500 data-[state=open]:text-blue-500 dark:text-foreground-dark dark:hover:text-yellow-500 dark:focus:text-yellow-500 dark:focus-visible:text-yellow-500 dark:data-[state=open]:text-yellow-500"
-                  data-first="false"
-                  tabIndex={0}
-                  data-radix-collection-item=""
-                >
-                  <div className="flex flex-col items-center justify-center gap-1">
-                    <h2 className="">Mais Serviços</h2>
                   </div>
                   <span className="sr-only">Abrir contéudo</span>
                   <svg

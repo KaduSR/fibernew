@@ -88,12 +88,11 @@ export default function YourComboSection() {
               </div>
               <div className="relative md:bottom-[2.6875rem] md:w-[9.5625rem]">
                 <h3 className="font-figtree text-xl font-medium text-gray-700 dark:text-white">
-                  Telefonia
+                  Wifi
                 </h3>
                 <div className="mb-3 mt-2 h-0.5 w-9 rounded-md bg-orange-400 dark:bg-white" />
                 <p className="font-barlow text-xs font-normal text-gray-600 dark:text-white">
-                  Serviço de telefonia móvel 5G e fixo, para você falar à
-                  vontade.
+                  Aproveite o máximo do seu celular com a nossa rede
                 </p>
               </div>
             </div>
