@@ -22,7 +22,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="suppressHydrationWarning">
+    <html
+      lang="pt-BR"
+      className="suppressHydrationWarning dark"
+      style={{ colorScheme: "dark" }}
+    >
       <body className="overflow-x-hidden">
         <ThemeProvider attribute={"class"}>
           <div className="relative flex min-h-screen flex-col">

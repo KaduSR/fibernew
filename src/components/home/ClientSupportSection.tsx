@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FileText, PhoneCall, Headphones, Monitor, MapPin } from "lucide-react";
+import ModalFatura from "@/components/modals/ModalFatura";
+import { useState } from "react";
 
 const SUPPORT_OPTIONS = [
   {
@@ -43,6 +45,8 @@ const SUPPORT_OPTIONS = [
 ];
 
 export function ClientSupportSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div>
       <section className="py-24 dark:border-t dark:border-gray-600 dark:background-dark border-gray-700">
@@ -54,7 +58,7 @@ export function ClientSupportSection() {
             <button
               type="button"
               aria-haspopup="dialog"
-              aria-expanded="false"
+              aria-expanded={isModalOpen}
               aria-controls="radix-:R6qnnjf1la:"
               data-state="closed"
               className="tab-focus flex justify-start rounded-2xl"
@@ -68,41 +72,41 @@ export function ClientSupportSection() {
                     className="-ml-[0.5rem] size-8 text-gray-600 group-hover/card:text-white dark:text-white"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M22.4659 6.66699H12.4854C11.1073 6.66699 9.99023 7.8609 9.99023 9.33366V30.667C9.99023 32.1398 11.1073 33.3337 12.4854 33.3337H27.4561C28.8341 33.3337 29.9513 32.1398 29.9513 30.667V14.667L22.4659 6.66699Z"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     <path
                       d="M22.4648 6.66699V14.667H29.9502"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     <path
                       d="M24.961 21.333H14.9805"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     <path
                       d="M24.961 26.667H14.9805"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     <path
                       d="M17.4756 16H16.228H14.9805"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                   <h3 className="mt-5 text-sm font-medium text-gray-700 group-hover/card:text-white dark:text-white md:text-base">
@@ -128,17 +132,17 @@ export function ClientSupportSection() {
                     <path
                       d="M4.16675 10H15.8334"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                     <path
                       d="M10 4.16675L15.8333 10.0001L10 15.8334"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></path>
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </div>
               </div>
@@ -160,45 +164,45 @@ export function ClientSupportSection() {
                     className="-ml-[0.5rem] size-8 text-gray-600 group-hover/card:text-white dark:text-white"
                   >
                     <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
+                      fillRule="evenodd"
+                      clipRule="evenodd"
                       d="M22.4659 6.66699H12.4854C11.1073 6.66699 9.99023 7.8609 9.99023 9.33366V30.667C9.99023 32.1398 11.1073 33.3337 12.4854 33.3337H27.4561C28.8341 33.3337 29.9513 32.1398 29.9513 30.667V14.667L22.4659 6.66699Z"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     <path
                       d="M22.4648 6.66699V14.667H29.9502"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     <path
                       d="M24.961 21.333H14.9805"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     <path
                       d="M24.961 26.667H14.9805"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     <path
                       d="M17.4756 16H16.228H14.9805"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                   <h3 className="mt-5 text-sm font-medium text-gray-700 group-hover/card:text-white dark:text-white md:text-base">
-                    Suporte técnico 
+                    Suporte técnico
                   </h3>
                   <div
                     data-orientation="horizontal"
@@ -220,16 +224,16 @@ export function ClientSupportSection() {
                     <path
                       d="M4.16675 10H15.8334"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                     <path
                       d="M10 4.16675L15.8333 10.0001L10 15.8334"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     ></path>
                   </svg>
                 </div>

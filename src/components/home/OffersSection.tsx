@@ -98,15 +98,6 @@ export function OffersSection() {
               className="flex items-center gap-1 text-black underline dark:text-yellow-200"
             >
               Rio das Flores
-{/*              <svg viewBox="0 0 13 13" fill="none" className="h-4 w-4">
-                <path
-                  d="M10.834 4.333L6.5 8.666 2.167 4.333"
-                  stroke="currentColor"
-                  strokeWidth={1.5}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg> */}
             </button>
           </div>
         </div>
@@ -208,5 +199,6 @@ export function OffersSection() {
     </section>
   );
 }
+
 
 export default OffersSection;
