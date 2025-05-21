@@ -129,21 +129,24 @@ export function OffersSection() {
             const discounted = (priceNumber - offer.discount).toFixed(2);
 
             return (
-              <SwiperSlide key={offer.id} className="max-w-[344px]">
-                <div className="bg-white dark:bg-gray-800 p-6 shadow-lg dark:border dark:border-gray-700  flex-col">
+              <SwiperSlide
+                key={offer.id}
+                className="max-w-[1080px] justify-center"
+              >
+                <div className="bg-white dark:bg-gray-800 p-6 shadow-lg dark:border dark:border-gray-700  flex-col md:justify-center">
                   {/* Cabeçalho */}
-                  <div className="mb-4">
-                    <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-white">
-                      <span className="h-1 w-4 bg-orange-400 dark:bg-white"></span>
+                  <div className="mb-1 justify-center">
+                    <div className="flex items-center gap-1  text-sm text-gray-600 dark:text-white">
+                      <span className="h-2 w-4 bg-orange-400 dark:bg-white"></span>
                       INTERNET
                     </div>
-                    <h2 className="text-xl font-bold dark:text-white mt-2 items-center">
+                    <h2 className="text-xl font-bold dark:text-white mt-2 md:items-center">
                       {offer.speed}
                     </h2>
                   </div>
 
                   {/* Recursos */}
-                  <ul className="space-y-3 mb-6 text-sm text-gray-600 dark:text-gray-300 flex-1">
+                  <ul className="space-y-3 mb-6 text-sm text-gray-600 dark:text-gray-300 flex-1 md:items-center">
                     {[
                       offer.installation,
                       offer.fiber,
@@ -192,7 +195,7 @@ export function OffersSection() {
                         /mês
                       </span>
                     </div>
-                    <button className="w-full bg-orange-500 dark:bg-orange-200 text-white dark:text-white py-3 rounded-lg hover:opacity-90 transition-opacity">
+                    <button className="w-full bg-orange-500 dark:bg-green-500 text-white dark:text-white py-3 rounded-lg hover:opacity-90 transition-opacity">
                       Assinar agora
                     </button>
                   </div>
