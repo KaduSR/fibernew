@@ -122,7 +122,7 @@ export function OffersSection() {
             return (
               <SwiperSlide
                 key={offer.id}
-                className="max-w-[1080px] justify-center"
+                className="max-w-[1440px] justify-center"
               >
                 <div className="bg-white dark:bg-gray-800 p-6 shadow-lg dark:border dark:border-gray-700  flex-col md:justify-center">
                   {/* Cabeçalho */}

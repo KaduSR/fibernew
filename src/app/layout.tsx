@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/fonts.css";
-import "@/styles/styles1.css";
-import "@/styles/styles2.css";
-import Header from "@/components/layout/Header";
+{/* import "@/styles/styles1.css"; */}
+{/* import "@/styles/styles2.css"; */}
+import "@/styles/globals.css";
 import Footer from "@/components/layout/Footer";
 import FloatingButton from "@/components/modals/FloatingButton";
 import { ThemeProvider } from "next-themes";
+import { Header } from "@/components/layout/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -30,18 +30,13 @@ export default function RootLayout({
     >
       <body className="overflow-x-hidden">
         <ThemeProvider attribute={"class"}>
-          <div className="relative flex min-h-screen flex-col">
-            <nav className="sticky top-0 z-10 hidden w-screen min-w-[375px] bg-green-500 dark:bg-background-dark 2md:flex">
-              <div className="container flex flex-row items-center justify-between px-6 2lg:px-0"></div>
-            </nav>
-            <Header />
-            <main>{children}</main>
-            <FloatingButton />
-            <Footer />
-          </div>
+          <Header />
+          <main>{children}</main>
+
+          <Footer />
         </ThemeProvider>
+        <FloatingButton />
       </body>
     </html>
   );
 }
-  

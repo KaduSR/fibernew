@@ -8,7 +8,7 @@ export default function YourComboSection() {
   return (
     <section
       id="your-combo"
-      className="bg-white pb-20 pt-[5.5rem] dark:bg-gray-700 md:pb-24 md:pt-20 lg:pt-24"
+      className="bg-white pb-20 dark:bg-gray-700 md:pb-24 md:pt-20 lg:pt-24"
     >
       <div className="flex flex-col gap-y-10 2lg:container 2lg:mx-auto 2lg:flex-row 2lg:justify-end 2lg:gap-x-[4.375rem]">
         {/* Texto e CTA */}
