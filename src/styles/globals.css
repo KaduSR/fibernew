@@ -34,8 +34,8 @@
 
         --radius: 0.5rem;
 
-        --brisanet-orange: 15 95% 53%;
-        --brisanet-blue: 228 100% 26%;
+        --fibernet-orange: 15 95% 53%;
+        --fibernet-blue: 228 100% 26%;
     }
 
     .dark {
@@ -168,4 +168,89 @@
 
 .service-icon {
     @apply text-primary w-12 h-12;
+}
+
+.elemento {
+    visibility: hidden;
+}
+
+[hidden] {
+    display: none
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.container-banner {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    max-width: 1536px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between
+}
+.pointer-events-none {
+    pointer-events: none
+}
+
+.visible {
+    visibility: visible
+}
+
+.invisible {
+    visibility: hidden
+}
+
+.absolute {
+    position: absolute
+}
+
+.relative {
+    position: relative
+}
+
+.sticky {
+    position: sticky
+}
+
+.inset-0 {
+    inset: 0
+}
+
+.inset-x-0 {
+    left: 0;
+    right: 0
+}
+
+.inset-y-0 {
+    top: 0;
+    bottom: 0
+}
+
+.-bottom-1 {
+    bottom: -.25rem
+}
+
+.-bottom-2 {
+    bottom: -.5rem
+}
+
+.-bottom-4 {
+    bottom: -1rem
+}
+
+.-bottom-6 {
+    bottom: -1.5rem
+}
+
+.-bottom-7 {
+    bottom: -1.75rem
+}
+
+.-bottom-8 {
+    bottom: -2rem
 }

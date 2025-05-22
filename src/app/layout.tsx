@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/fonts.css";
-{/* import "@/styles/styles1.css"; */}
-{/* import "@/styles/styles2.css"; */}
+import "@/styles/styles1.css";
+  /* import "@/styles/styles2.css"; */
 import "@/styles/globals.css";
 import Footer from "@/components/layout/Footer";
-import FloatingButton from "@/components/modals/FloatingButton";
+import FloatingButton from "@/components/ui/FloatingButton";
 import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/layout/Header";
+import Navbar from "@/components/layout/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,8 @@ export default function RootLayout({
     >
       <body className="overflow-x-hidden">
         <ThemeProvider attribute={"class"}>
+          
+          <Navbar/>
           <Header />
           <main>{children}</main>
 

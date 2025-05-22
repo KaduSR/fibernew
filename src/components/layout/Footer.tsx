@@ -215,11 +215,11 @@ export function Footer() {
       </div>
       {/* Copyright bar */}
       <div className="w-full  px-6 bg-gray-700">
-        <div className="bg-primary text-white">
+        <div className="bg-gray-700 text-white">
           <div className="container flex h-24 flex-row items-center justify-start pl-6 2lg:pl-0">
             <Link
               href="/acessibilidade"
-              className="tab-focus text-base font-medium text-white hover:underline focus:ring-white" 
+              className="tab-focus text-base font-medium text-white hover:underline focus:ring-white"
             >
               Acessibilidade
             </Link>

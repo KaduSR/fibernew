@@ -1,13 +1,25 @@
 "use client";
 
 export function FloatingButtons() {
+  const handleClick = () => {
+    window.open(
+      "https://wa.me/552424581861?text=%20Oi!%20Tenho%20interesse%20na%20internet%20da%20Fiber.NET%20.%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es,%20por%20favor?%20"
+    );
+  }
 
   return (
-    <div className="fixed bottom-14 right-2 z-60 flex flex-col gap-4 mr-6">
+    <div
+      className="fixed bottom-14 right-2 z-60 flex flex-col gap-4 mr-6"
+      style={{
+        position: "fixed",
+        zIndex: 1000,
+      }}
+    >
       {/* Botão de Contato WhatsApp */}
-      <div className="flex size-16 cursor-pointer items-center justify-center rounded-full px-3 py-3 transition-all duration-500 ease-in-out dark:bg-orange-200 right-2">
+      <div className="flex size-16 cursor-pointer items-center justify-center rounded-full px-3 py-3 transition-all duration-500 ease-in-out dark:bg-orange-700 right-2 mb-12">
         <button
-          className="focus-visible:ring-ring text-lg font-semibold ring-offset-background focus:ring-orange-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-background-dark dark:focus:ring-yellow-200 bottom-14 right-2 mb-12 mr-6 cursor-pointer bg-whatsapp transition-all duration-500 ease-in-out rounded-full dark:bg-yellow-200 dark:hover:bg-yellow-500 px-4 py-3 group flex size-16 items-center justify-center fixed hover:w-80"
+          onClick={handleClick}
+          className="focus-visible:ring-ring text-lg font-semibold ring-offset-background focus:ring-orange-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-background-dark dark:focus:ring-green-200 bottom-14 right-2 mb-12 mr-6 cursor-pointer bg-whatsapp transition-all duration-500 ease-in-out rounded-full dark:bg-green-500 dark:hover:bg-green-500 px-4 py-3 group flex size-16 items-center justify-center fixed hover:w-80"
           aria-label="whatsapp"
           id="botaowpp"
           type="button"
@@ -16,12 +28,11 @@ export function FloatingButtons() {
           aria-controls="radix-:R7f1la:"
           data-state="closed"
         >
-
           <p
             className="mr-1 hidden animate-show-text text-left text-lg font-semibold normal-case leading-[22px] text-white group-hover:block group-hover:overflow-hidden group-hover:whitespace-nowrap dark:text-black"
             id="botaowpp-txt"
           >
-            Contrate direto pelo whatsapp
+            Assine direto pelo whatsapp
           </p>
           <svg
             id="botaowpp-ic"
@@ -37,9 +48,6 @@ export function FloatingButtons() {
           </svg>
         </button>
       </div>
-
-      {/* Botão de Alternar Tema */}
-
     </div>
   );
 }

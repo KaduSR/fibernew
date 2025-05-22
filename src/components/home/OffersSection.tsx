@@ -111,7 +111,7 @@ export function OffersSection() {
             1024: { slidesPerView: 3 },
           }}
           pagination={{ clickable: false }}
-          className="max-w-[1440px] justify-center"
+          className="max-w-[1440px] justify-center mt-5"
         >
           {offers.map((offer) => {
             const priceNumber = Number(
@@ -124,11 +124,11 @@ export function OffersSection() {
                 key={offer.id}
                 className="max-w-[1440px] justify-center"
               >
-                <div className="bg-white dark:bg-gray-800 p-6 shadow-lg dark:border dark:border-gray-700  flex-col md:justify-center">
+                <div className="bg-white dark:bg-gray-800 p-7 shadow-lg dark:border dark:border-gray-700  flex-col md:justify-center ">
                   {/* Cabeçalho */}
                   <div className="mb-1 justify-center">
                     <div className="flex items-center gap-1  text-sm text-gray-600 dark:text-white">
-                      <span className="h-2 w-4 bg-orange-400 dark:bg-white"></span>
+                      <span className="h-2 w-4 bg-orange-500 dark:bg-white"></span>
                       INTERNET
                     </div>
                     <h2 className="text-xl font-bold dark:text-white mt-2 md:items-center">
@@ -153,7 +153,7 @@ export function OffersSection() {
                   </ul>
 
                   {/* Produtos inclusos */}
-                  <div className="mb-6">
+                  <div className="mb-5">
                     <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
                       Aproveite os serviços:
                     </p>
@@ -161,7 +161,7 @@ export function OffersSection() {
                       {offer.products.map((p, i) => (
                         <span
                           key={i}
-                          className="p-2 rounded-lg bg-green-600 dark:bg-orange-200"
+                          className="p-2 rounded-lg"
                         >
                           {p.icon}
                         </span>
@@ -171,7 +171,7 @@ export function OffersSection() {
 
                   {/* Preço e CTA */}
                   <div>
-                    <p className="text-green-500 dark:text-green-400 text-sm mb-2">
+                    <p className="text-white text-sm mb-2">
                       Desconto até o vencimento de R${" "}
                       {offer.discount.toFixed(2).replace(".", ",")}
                     </p>
