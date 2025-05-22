@@ -14,8 +14,8 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <OffersSection />
-    <YourComboSection/>
+      <YourComboSection />
       <ClientSupportSection />
-    </>
+      </>
   );
 }

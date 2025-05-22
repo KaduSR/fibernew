@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/fonts.css";
 import "@/styles/styles1.css";
+import "@/styles/styles2.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import FloatingButton from "@/components/layout/FloatingButton";
+import FloatingButton from "@/components/modals/FloatingButton";
 import { ThemeProvider } from "next-themes";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,7 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="suppressHydrationWarning">
+    <html
+      lang="pt-BR"
+      className="suppressHydrationWarning dark"
+      style={{ colorScheme: "dark" }}
+    >
       <body className="overflow-x-hidden">
         <ThemeProvider attribute={"class"}>
           <div className="relative flex min-h-screen flex-col">

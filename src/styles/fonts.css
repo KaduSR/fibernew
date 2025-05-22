@@ -493,7 +493,7 @@
     z-index: var(--toastify-z-index);
     -webkit-transform: translateZ(var(--toastify-z-index));
     position: fixed;
-    padding: 4px;
+    padding: 5px;
     width: var(--toastify-toast-width);
     box-sizing: border-box;
     color: #fff

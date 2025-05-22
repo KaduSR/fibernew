@@ -286,14 +286,14 @@ html {
 }
 
 html:root {
-    --av-floating-margin-bottom: 185px;
-    --av-floating-margin-right: 30px;
+    --av-floating-margin-bottom: 175px;
+    --av-floating-margin-right: 40px;
     --av-color-primary: #f03200
 }
 
 html:root app-auvious-widget[data-av-device=mobile] {
     --av-floating-margin-bottom: 185px;
-    --av-floating-margin-right: 42px
+    --av-floating-margin-right: 50px
 }
 
 body {
@@ -542,10 +542,6 @@ body {
 
 .invisible {
     visibility: hidden
-}
-
-.fixed {
-    position: fixed
 }
 
 .absolute {
@@ -15455,6 +15451,7 @@ body {
     .lg\:bg-\[linear-gradient\(270deg\2c \#4E505B_65\.5\%\2c \#000000_100\%\)\] {
         background-image: linear-gradient(270deg, #4e505b 65.5%, #000)
     }
+
     .lg\:bg-gradient-to-r {
         background-image: linear-gradient(to right, var(--tw-gradient-stops))
     }
@@ -18441,4 +18438,129 @@ body {
         top: 22.7rem;
         justify-content: normal
     }
+}
+
+.bg-yellow-600 {
+    background-color: #d69e2e;
+}
+
+.bg-yellow-50 {
+    background-color: var(--color-yellow-50);
+}
+
+.bg-yellow-100 {
+    background-color: var(--color-yellow-100);
+}
+.bg-yellow-200 {
+    background-color: var(--color-yellow-200);
+}
+.bg-yellow-300 {
+    background-color: var(--color-yellow-300);
+}
+
+.bg-yellow-400 {
+    background-color: var(--color-yellow-400);
+}
+
+.bg-yellow-700 {
+    background-color: var(--color-yellow-700);
+}
+
+.bg-yellow-800 {
+    background-color: var(--color-yellow-800);
+}
+
+.bg-yellow-900 {
+    background-color: var(--color-yellow-900);
+}
+
+.bg-yellow-950 {
+    background-color: var(--color-yellow-950);
+}
+
+.bg-green-50 {
+    background-color: var(--color-green-50);
+}
+
+.bg-green-100 {
+    background-color: var(--color-green-100);
+}
+
+.bg-green-200 {
+    background-color: var(--color-green-200);
+}
+.bg-green-300 {
+    background-color: var(--color-green-300);
+}
+
+.bg-green-400 {
+    background-color: var(--color-green-400);
+}
+
+.bg-green-500 {
+    background-color: var(--color-green-500);
+}
+
+.bg-green-600 {
+    background-color: var(--color-green-600);
+}
+
+.bg-green-700 {
+    background-color: var(--color-green-700);
+}
+
+.bg-green-800 {
+    background-color: var(--color-green-800);
+}
+
+.bg-green-900 {
+    background-color: var(--color-green-900);
+}
+
+.bg-green-950 {
+    background-color: var(--color-green-950);
+}
+
+.bg-blue-50 {
+    background-color: var(--color-blue-50);
+}
+
+.bg-blue-100 {
+    background-color: var(--color-blue-100);
+}
+
+.bg-blue-200 {
+    background-color: var(--color-blue-200);
+}
+
+.bg-blue-300 {
+    background-color: var(--color-blue-300);
+}
+
+.bg-blue-400 {
+    background-color: var(--color-blue-400);
+}
+
+.bg-blue-500 {
+    background-color: var(--color-blue-500);
+}
+
+.bg-blue-600 {
+    background-color: var(--color-blue-600);
+}
+
+.bg-blue-700 {
+    background-color: var(--color-blue-700);
+}
+
+.bg-blue-800 {
+    background-color: var(--color-blue-800);
+}
+
+.bg-blue-900 {
+    background-color: var(--color-blue-900);
+}
+
+.bg-blue-950 {
+    background-color: var(--color-blue-950);
 }

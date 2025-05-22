@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FileText, PhoneCall, Headphones, Monitor, MapPin } from "lucide-react";
+import ModalFatura from "@/components/modals/ModalFatura";
+import { useState } from "react";
 
 const SUPPORT_OPTIONS = [
   {
@@ -43,153 +45,200 @@ const SUPPORT_OPTIONS = [
 ];
 
 export function ClientSupportSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div>
-      <section className="py-16 bg-[hsl(var(--background))] dark:bg-[hsl(var(--background))] transition-colors">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-[hsl(var(--foreground))] mb-6">
+      <section className="py-24 dark:border-t dark:border-gray-600 dark:background-dark border-gray-700">
+        <div className="container px-5 md:px-6 2lg:px-0">
+          <h2 className="mb-8 font-figtree text-3xl font-bold leading-9 text-blue-700 dark:text-white md:text-4xl md:leading-[2.75rem] xl:text-5xl xl:leading-[3.25rem]">
             Autoatendimento para clientes
           </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-            {SUPPORT_OPTIONS.map((option) => (
-              <Link
-                key={option.id}
-                href={option.link}
-                className="
-                  bg-[hsl(var(--background))]
-                  rounded-lg shadow-sm hover:shadow-md transition-shadow p-4
-                  flex flex-col items-center text-center
-                  border border-[hsl(var(--border))]
-                  hover:border-[hsl(var(--green))]
-                "
-              >
-                <div
-                  className="
-                    h-12 w-12 rounded-full bg-[hsl(var(--green))]/10
-                    flex items-center justify-center text-[hsl(var(--green))]
-                    mb-3
-                  "
-                >
-                  <option.icon className="h-6 w-6" />
+          <div className="grid grid-cols-2 flex-wrap gap-x-4 gap-y-6 md:flex md:gap-x-8 md:gap-y-8 xl:gap-x-7">
+            <button
+              type="button"
+              aria-haspopup="dialog"
+              aria-expanded={isModalOpen}
+              aria-controls="radix-:R6qnnjf1la:"
+              data-state="closed"
+              className="tab-focus flex justify-start rounded-2xl"
+            >
+              <div className="border shadow-sm group/card flex h-52 w-full cursor-pointer flex-col justify-between rounded-2xl dark:border-white border-black bg-white p-5 transition-colors durantion-300 hover:bg-orange-500 dark:border-solid dark:bg-gray-800 dark:hover:ring-2 dark:hover:ring-yellow-200 md:w-[10.6rem]">
+                <div className="flex flex-1 flex-col items-start justify-start p-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    className="-ml-[0.5rem] size-8 text-gray-600 group-hover/card:text-white dark:text-white"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M22.4659 6.66699H12.4854C11.1073 6.66699 9.99023 7.8609 9.99023 9.33366V30.667C9.99023 32.1398 11.1073 33.3337 12.4854 33.3337H27.4561C28.8341 33.3337 29.9513 32.1398 29.9513 30.667V14.667L22.4659 6.66699Z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M22.4648 6.66699V14.667H29.9502"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M24.961 21.333H14.9805"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M24.961 26.667H14.9805"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M17.4756 16H16.228H14.9805"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                  </svg>
+                  <h3 className="mt-5 text-sm font-medium text-gray-700 group-hover/card:text-white dark:text-white md:text-base">
+                    2ª via da fatura
+                  </h3>
+                  <div
+                    data-orientation="horizontal"
+                    role="none"
+                    className="shrink-1 mt-3 h-[3px] w-[2.5625rem] rounded-sm bg-orange-500 group-hover/card:bg-white dark:bg-orange-500 "
+                  ></div>
+                  <p className="mt-3 max-w-fit text-left text-[0.75rem] leading-4 text-gray-600 group-hover/card:text-white dark:text-white md:text-sm md:leading-[1.125rem]">
+                    Baixe sua fatura aqui{" "}
+                  </p>
                 </div>
-                <h3 className="font-semibold text-[hsl(var(--foreground))] mb-1">
-                  {option.title}
-                </h3>
-                <p className="text-sm text-[hsl(var(--foreground))/0.75]">
-                  {option.description}
-                </p>
-                <div className="mt-3 text-[hsl(var(--green))]">
-                  {/* ícone de seta */}
-                  <svg /* ... */ />
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="section-extra-services-fibernet"
-        className="px-5 pb-[9.5rem] pt-24 md:px-6 md:pb-24 lg:pb-20 lg:pt-20 2l:px-0 bg-[hsl(var(--background))] dark:bg-[hsl(var(--background))] transition-colors"
-      >
-        {/* App banner */}
-        <div
-          className="px-5 pb-[9.5rem] pt-24
-    md:px-6 md:pb-24
-    lg:pb-20 lg:pt-20
-    2lg:px-0
-
-    /* Fundo com imagem */
-    bg-[url('/img/wallpaper/fundo-azul.jpg')]
-    bg-cover
-    bg-center
-    bg-no-repeat
-
-    /* Para alternar tema, se quiser overlay escuro */
-    relative
-    transition-colors
-
-    /* Arredondamento */
-    rounded-2xl"
-        >
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="p-8 md:p-12 text-[hsl(var(--green-foreground))] md:w-2/3">
-              <h2 className="text-2xl font-bold mb-4 text-white">
-                Agora você pode baixar a sua fatura online
-              </h2>
-              <p className="font-figtree text-xl font-medium leading-6 text-white lg:w-[22rem]">
-                Entre na nossa central do assinante
-              </p>
-              <Link
-                href="https://www.centralfiber.online/central_assinante_web/login"
-                className="
-                    inline-flex items-center justify-center rounded-md
-                    text-white bg-green-800
-                    px-5 py-2 font-medium hover:bg-[hsl(var(--muted))] hover:text-black transition-colors
-                  "
-              >
-                Conheça nossa central
-              </Link>
-            </div>
-            <div className="md:w-1/3 text-center">
-              {/* Placeholder for app image */}
-              <div
-                className="
-    relative
-    w-full
-    h-full
-    /* Largura dinâmica */
-    md:w-[10.5rem]
-    lg:w-[18.5rem]
-    2lg:w-[12.8rem]
-
-    /* Assegura proporção 1:1 para ser sempre quadrado */
-    aspect-square
-
-    /* Arredondamento */
-    rounded-2xl
-
-    /* Espaçamento interno e overflow */
-    overflow-hidden
-
-    /* Transições */
-    transition-all
-    duration-500
-
-    /* Borda dinâmica */
-    border
-    border-[hsl(var(--border))]
-    dark:border-[hsl(var(--foreground))]
-
-    /* Fundo dinâmico */
-    bg-[hsl(var(--background))]
-    dark:bg-[hsl(var(--background))]
-
-    /* Reduz o tamanho em 10% */
-    transform
-    scale-95
-  "
-              >
-                <div
-                  className="
-    relative                /* necessário para o Image fill */
-    w-full                  /* largura total do quadrado */
-    h-full                  /* altura total do quadrado */
-    overflow-hidden         /* esconde o que ultrapassar */
-    rounded-2xl         /* suas bordas arredondadas */
-  "
-                >
-                  <Image
-                    src="/img/paginas/centraldoassinante.png"
-                    alt="App"
-                    fill /* preenche 100% do pai */
-                    className="object-cover" /* mantém proporção e cobre todo o pai */
-                    priority
-                  />
+                <div className="items-center flex justify-end p-0">
+                  <span className="sr-only">Seta apontando para a direita</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    className="h-8 w-9 text-orange-500 hover:text-orange-600 group-hover/card:text-white dark:text-orange-500 dark:hover:text-white"
+                  >
+                    <path
+                      d="M4.16675 10H15.8334"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M10 4.16675L15.8333 10.0001L10 15.8334"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
                 </div>
               </div>
-            </div>
+            </button>
+            <button
+              type="button"
+              aria-haspopup="dialog"
+              aria-expanded="false"
+              aria-controls="radix-:R6qnnjf1la:"
+              data-state="closed"
+              className="tab-focus flex justify-start rounded-2xl"
+            >
+              <div className="border shadow-sm group/card flex h-52 w-full cursor-pointer flex-col justify-between rounded-2xl dark:border-white border-black bg-white p-5 transition-colors durantion-300 hover:bg-orange-500 dark:border-solid dark:bg-gray-800 dark:hover:ring-2 dark:hover:ring-yellow-200 md:w-[10.6rem]">
+                <div className="flex flex-1 flex-col items-start justify-start p-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    className="-ml-[0.5rem] size-8 text-gray-600 group-hover/card:text-white dark:text-white"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M22.4659 6.66699H12.4854C11.1073 6.66699 9.99023 7.8609 9.99023 9.33366V30.667C9.99023 32.1398 11.1073 33.3337 12.4854 33.3337H27.4561C28.8341 33.3337 29.9513 32.1398 29.9513 30.667V14.667L22.4659 6.66699Z"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M22.4648 6.66699V14.667H29.9502"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M24.961 21.333H14.9805"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M24.961 26.667H14.9805"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M17.4756 16H16.228H14.9805"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                  </svg>
+                  <h3 className="mt-5 text-sm font-medium text-gray-700 group-hover/card:text-white dark:text-white md:text-base">
+                    Suporte técnico
+                  </h3>
+                  <div
+                    data-orientation="horizontal"
+                    role="none"
+                    className="shrink-1 mt-3 h-[3px] w-[2.5625rem] rounded-sm bg-orange-500 group-hover/card:bg-white dark:bg-orange-500 "
+                  ></div>
+                  <p className="mt-3 max-w-fit text-left text-[0.75rem] leading-4 text-gray-600 group-hover/card:text-white dark:text-white md:text-sm md:leading-[1.125rem]">
+                    Suporte técnico especializado!
+                  </p>
+                </div>
+                <div className="items-center flex justify-end p-0">
+                  <span className="sr-only">Seta apontando para a direita</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    className="h-8 w-9 text-orange-500 hover:text-orange-600 group-hover/card:text-white dark:text-orange-500 dark:hover:text-white"
+                  >
+                    <path
+                      d="M4.16675 10H15.8334"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                    <path
+                      d="M10 4.16675L15.8333 10.0001L10 15.8334"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    ></path>
+                  </svg>
+                </div>
+              </div>
+            </button>
           </div>
         </div>
       </section>
