@@ -51,7 +51,7 @@ export function ClientSupportSection() {
     <div>
       <section className="py-20 dark:border-t dark:border-gray-600 dark:background-dark border-gray-700">
         <div className="container px-6 md:px-6 2lg:px-0">
-          <h2 className="mb-8 font-figtree text-3xl font-bold leading-9 text-blue-700 dark:text-white md:text-4xl md:leading-[2.75rem] xl:text-5xl xl:leading-[3.25rem]">
+          <h2 className="mb-8 font-figtree text-3xl font-bold leading-9 text-orange-400 dark:text-white md:text-4xl md:leading-[2.75rem] xl:text-5xl xl:leading-[3.25rem]">
             Autoatendimento para clientes
           </h2>
           <div className="grid grid-cols-2 flex-wrap gap-x-4 gap-y-6 md:flex md:gap-x-8 md:gap-y-8 xl:gap-x-7">

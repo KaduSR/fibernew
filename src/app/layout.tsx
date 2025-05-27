@@ -26,18 +26,12 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className="suppressHydrationWarning dark"
-      style={{ colorScheme: "dark" }}
     >
-      <body className="overflow-x-hidden">
-        <ThemeProvider attribute={"class"}>
-          
+      <body className="overflow-x-hidden">  
           <Navbar/>
           <Header />
           <main>{children}</main>
-
           <Footer />
-        </ThemeProvider>
         <FloatingButton />
       </body>
     </html>
