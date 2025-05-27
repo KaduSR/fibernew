@@ -6,14 +6,14 @@ import "@/styles/styles1.css";
 import "@/styles/globals.css";
 import Footer from "@/components/layout/Footer";
 import FloatingButton from "@/components/ui/FloatingButton";
-import { ThemeProvider } from "next-themes";
 import { Header } from "@/components/layout/Header";
 import Navbar from "@/components/layout/Navbar";
+import { ThemeProvider } from "@/components/modals/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Internet Fibra Óptica | Fiber.NET",
+  title: "Fiber.NET | A internet que você precisa",
   description:
     "Desfrute de uma conexão estável e ultrarrápida com a Fiber.NET – sua porta de entrada para o mundo digital.",
 };
@@ -24,6 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+<<<<<<< HEAD
     <html
       lang="pt-BR"
     >
@@ -33,6 +34,17 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         <FloatingButton />
+=======
+    <html lang="pt-BR">
+      <body className={"${inter.className} antialiased"}>
+        <ThemeProvider>
+          <Navbar />
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <FloatingButton />
+        </ThemeProvider>
+>>>>>>> e6df1f11e203cc4ebdf99db6b003dc2f01017bff
       </body>
     </html>
   );

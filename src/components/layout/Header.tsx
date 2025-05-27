@@ -55,14 +55,14 @@ export function Header() {
                       href="/"
                       data-radix-collection-item=""
                     >
-                      <div className="flex flex-col items-center justify-center gap-2 bg-background-dark">
-                        <h2 className="md:text-sm lg:text-base font-medium leading-5 hover:text-white  group-data-[state=open]:text-white">
+                      <div className="flex flex-col items-center justify-center gap-2 bg-transparent rounded-full">
+                        <h2 className="md:text-sm lg:text-base font-medium leading-5 text-black hover:text-orange-500 group-data-[state=open]:text-white">
                           Para sua casa
                         </h2>
                         <div
                           data-orientation="horizontal"
                           role="none"
-                          className="shrink-0 w-12 block h-[3px] max-w-[96px] rounded-t-lg bg-blue-500 dark:bg-gray-100"
+                          className="shrink-0 w-12 block h-[3px] max-w-[96px] rounded-t-lg bg-black dark:bg-gray-100"
                         ></div>
                       </div>
                     </Link>
@@ -77,14 +77,14 @@ export function Header() {
                       tabIndex={0}
                       data-radix-collection-item=""
                     >
-                      <div className="flex flex-col items-center justify-center gap-2 bg-background-dark">
-                        <h2 className="md:text-sm lg:text-base font-medium leading-5 hover:text-white  group-data-[state=open]:text-white">
+                      <div className="flex flex-col items-center justify-center gap-2 bg-transparent">
+                        <h2 className="md:text-sm lg:text-base font-medium leading-5 text-black hover:text-orange-500 group-data-[state=open]:text-white">
                           Empresas
                         </h2>
                         <div
                           data-orientation="horizontal"
                           role="none"
-                          className="shrink-0 h-[3px] w-12 rounded-t-lg bg-transparent dark:bg-transparent"
+                          className="shrink-0 h-[3px] w-12 rounded-t-lg bg-transparent dark:bg-transparent hover:text-orange-500"
                         ></div>
                       </div>
                       <span className="sr-only">Seta apontada para baixo</span>
@@ -204,7 +204,10 @@ export function Header() {
             </nav>
           </div>
         </div>
+<<<<<<< HEAD
        
+=======
+>>>>>>> e6df1f11e203cc4ebdf99db6b003dc2f01017bff
       </div>
     </header>
   );

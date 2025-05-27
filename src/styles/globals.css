@@ -254,3 +254,104 @@
 .-bottom-8 {
     bottom: -2rem
 }
+
+.swipe-slide {
+    width: 1440px;
+    opacity: 1;
+    transform: translate3d(-1255px, 0px 0px); transition-duration: 0ms;
+}
+
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f9fc;
+    /* Cor de fundo suave */
+}
+
+/* Estilo do slide do Swiper */
+.swiper-slide {
+height: 496px;
+transition-duration: 0ms;
+transition-delay: 0ms;
+}
+
+.swiper-slide{
+    width: 1255px;
+    opacity: 0;
+    transform: translate3d(0px, 0px, 0px);
+    transition-delay: 0ms;
+}
+
+/* Estilo da seção do banner */
+#banner-home-Fibra-óptica {
+    display: flex;
+    flex-direction: column;
+    height: 536px;
+    /* Altura padrão */
+    width: 100%;
+    background-color: #e5e7eb;
+    /* Cor de fundo cinza claro */
+    background-image: url("https://s3.brisanet.net.br/cmsbrisasite-p1/web_1440x496_2_2e7fd0368c.webp");
+    background-size: cover;
+    background-position: center;
+    padding-top: 10px;
+}
+
+/* Estilo do conteúdo do banner */
+.cursor-pointer {
+    cursor: pointer;
+    max-width: 1440px;
+    margin: auto;
+}
+
+/* Estilo do texto do banner */
+#banner-txt-Fibra-óptica {
+    max-width: 335px;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    /* Cor do texto */
+    font-size: 1.5rem;
+    /* Tamanho do texto */
+}
+
+/* Estilo para telas médias e grandes */
+@media (min-width: 768px) {
+    #banner-txt-Fibra-óptica {
+        text-align: left;
+        font-size: 2rem;
+        /* Aumenta o tamanho do texto */
+    }
+}
+
+/* Estilo da imagem */
+img {
+    object-fit: cover;
+    /* Cobre o espaço disponível */
+    width: 100%;
+    /* Largura total */
+    height: auto;
+    /* Altura automática */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+}
+
+/* Estilo do contêiner da imagem */
+.mask-image {
+    position: relative;
+    margin: auto;
+    height: 224px;
+    /* Altura padrão */
+    width: 271px;
+    /* Largura padrão */
+}
+
+/* Estilo para telas pequenas */
+@media (max-width: 768px) {
+    .mask-image {
+        display: none;
+        /* Esconde a imagem em telas pequenas */
+    }
+}
