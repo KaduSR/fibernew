@@ -1,0 +1,40 @@
+/* components/DropdownMenu/DropdownMenu.module.css */
+
+.dropdownContainer {
+    position: relative;
+    display: inline-block;
+    /* Permite que o container se ajuste ao tamanho do trigger */
+}
+
+.dropdownTrigger {
+    cursor: pointer;
+}
+
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    /* Posiciona abaixo do trigger */
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 160px;
+    /* Largura mínima para o menu */
+    z-index: 1000;
+    /* Garante que o dropdown fique acima de outros elementos */
+    padding: 8px 0;
+    border-radius: 4px;
+}
+
+/* Posições do menu */
+.positionLeft {
+    left: 0;
+}
+
+.positionRight {
+    right: 0;
+}
+
+.positionCenter {
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centraliza o menu */ }

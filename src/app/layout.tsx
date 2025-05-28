@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@/styles/fonts.css";
 import "@/styles/styles1.css";
-  /* import "@/styles/styles2.css"; */
+/* import "@/styles/styles2.css"; */
 import "@/styles/globals.css";
 import Footer from "@/components/layout/Footer";
 import FloatingButton from "@/components/ui/FloatingButton";
-import { Header } from "@/components/layout/Header";
 import Navbar from "@/components/layout/Navbar";
-import { ThemeProvider } from "@/components/modals/ThemeProvider";
+import { Header } from "@/components/layout/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,27 +23,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-<<<<<<< HEAD
-    <html
-      lang="pt-BR"
-    >
-      <body className="overflow-x-hidden">  
-          <Navbar/>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        <FloatingButton />
-=======
     <html lang="pt-BR">
-      <body className={"${inter.className} antialiased"}>
-        <ThemeProvider>
-          <Navbar />
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <FloatingButton />
-        </ThemeProvider>
->>>>>>> e6df1f11e203cc4ebdf99db6b003dc2f01017bff
+      <body className="overflow-x-hidden">
+        <Navbar />
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <FloatingButton />
       </body>
     </html>
   );

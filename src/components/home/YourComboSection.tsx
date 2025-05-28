@@ -2,7 +2,6 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRightIcon } from "lucide-react"; // example for arrows, if needed
 
 export default function YourComboSection() {
   return (
