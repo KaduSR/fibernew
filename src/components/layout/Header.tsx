@@ -40,9 +40,8 @@ export function Header() {
               <Image
                 src="/img/logos/Imagem1.png"
                 alt="FiberNET"
-                width={132}
-                height={24}
-                className="h-7 w-32 lg:h-8 lg:w-44"
+                width={200}
+                height={35}
               />
             </Link>
 
@@ -164,7 +163,7 @@ export function Header() {
                       tabIndex={0}
                       data-radix-collection-item=""
                       variant="transparentOrange"
-                      className="h-10 py-2 pl-0 pr-4 font-figtree text-lg leading-6 shadow-md hover:shadow-lg w-full md:w-auto"
+                      className="h-10 py-2 pl-0 pr-4 font-figtree text-lg leading-6 w-full md:w-auto flex items-start justify-center"
                       asChild
                     >
                       <Link href="/assinatura">
@@ -198,7 +197,7 @@ export function Header() {
                         <Button
                           data-radix-collection-item=""
                           variant="transparentOrange"
-                          className="h-10 py-2 pl-0 pr-4 font-figtree text-lg leading-6 shadow-md hover:shadow-lg w-full md:w-auto"
+                          className="h-10 py-2 pl-0 pr-4 font-figtree text-lg leading-6 w-full md:w-auto"
                         >
                           Área do cliente
                           <svg
@@ -225,10 +224,10 @@ export function Header() {
                       >
                         <div className="flex flex-col gap-6 p-6 items-center">
                           <div className="flex flex-row gap-6">
-                            {/* Seção Brisacliente fibra */}
+                            {/* Seção cliente fibra */}
                             <div className="flex flex-col gap-3">
                               <div className="flex flex-row items-center">
-                                {/* SVG para Brisacliente fibra */}
+                                {/* SVG para cliente fibra */}
                                 <svg
                                   viewBox="0 0 72 72"
                                   fill="none"
@@ -244,18 +243,18 @@ export function Header() {
                                   ></path>
                                 </svg>
                                 <h2 className="select-none font-figtree text-base font-semibold leading-5 text-gray-700 dark:text-white">
-                                  Brisacliente fibra
+                                  Fiber.NET cliente
                                 </h2>
                               </div>
                               <p className="max-w-[288px] select-none text-justify text-sm text-gray-600 dark:text-white">
                                 Pelo app você tem acesso as suas faturas,
                                 informações do seu plano e muito mais.
                               </p>
-                              <h3 className="select-none font-figtree text-sm font-semibold text-gray-700 dark:text-white">
-                                Baixe o App Brisacliente
+                              {/* <h3 className="select-none font-figtree text-sm font-semibold text-gray-700 dark:text-white">
+                                Baixe o App Fiber.NET cliente
                               </h3>
                               <div className="flex items-center gap-4">
-                                {/* Link Google Play Brisacliente fibra */}
+                                {/* Link Google Play  
                                 <Link
                                   target="_blank"
                                   href="https://play.google.com/store/apps/details?id=br.com.brisanet.minhabrisa&amp;hl=pt_BR&amp;gl=US&amp;pli=1"
@@ -284,7 +283,7 @@ export function Header() {
                                     </p>
                                   </div>
                                 </Link>
-                                {/* Link App Store Brisacliente fibra */}
+                                {/* Link App Store Brisacliente fibra 
                                 <Link
                                   target="_blank"
                                   href="https://apps.apple.com/br/app/brisacliente/id1271781919"
@@ -313,20 +312,20 @@ export function Header() {
                                     </p>
                                   </div>
                                 </Link>
-                              </div>
+                              </div> */}
                               <p className="select-none font-figtree text-sm font-semibold text-gray-700 dark:text-white">
-                                Ou acesse nosso portal Web
+                                Acesse nosso portal Web
                               </p>
-                              {/* Link para o portal web Brisacliente fibra */}
+                              {/* Link para o portal web*/}
                               <Link
-                                className="tab-focus group flex h-[48px] w-[290px] items-center justify-center rounded-lg border-2 border-orange-500 hover:border-orange-600 hover:bg-orange-500 dark:border-yellow-200 dark:hover:border-yellow-500 dark:hover:bg-yellow-200"
-                                href="https://brisacliente.brisanet.com.br/#/areaassinante/auth"
+                                className="tab-focus group flex h-[48px] w-[290px] items-center justify-center border-2 border-orange-500 hover:border-orange-600 hover:bg-orange-500 dark:border-yellow-200 dark:hover:border-yellow-500 dark:hover:bg-yellow-200"
+                                href="https://www.centralfiber.online/central_assinante_web/login"
                                 data-radix-collection-item=""
                                 data-tabindex=""
                                 tabIndex={-1}
                               >
                                 <p className="font-figtree text-sm font-semibold text-orange-500 group-hover:text-white dark:text-yellow-200 dark:group-hover:text-gray-800">
-                                  Brisacliente
+                                  Fibra.NET cliente
                                 </p>
                               </Link>
                             </div>
@@ -341,7 +340,7 @@ export function Header() {
 
                           <div className="flex flex-row gap-12">
                             {/* Coluna FIBRA */}
-  
+
                             <div className="flex flex-col gap-3">
                               <p className="max-w-fit select-none font-figtree text-xs font-medium text-gray-400 dark:text-white">
                                 FIBRA

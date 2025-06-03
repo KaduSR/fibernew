@@ -1,15 +1,15 @@
+import "@/styles/fonts.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@/styles/fonts.css";
-import "@/styles/styles1.css";
-/* import "@/styles/styles2.css"; */
-import "@/styles/globals.css";
 import Footer from "@/components/layout/Footer";
-import FloatingButton from "@/components/ui/FloatingButton";
-import Navbar from "@/components/layout/Navbar";
 import { Header } from "@/components/layout/Header";
+import FloatingButton from "@/components/ui/FloatingButton";
+import "@/styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"], display: "swap",
+  fallback:["systen-ui", "arial", "sans-serif"]
+});
 
 export const metadata: Metadata = {
   title: "Fiber.NET | A internet que você precisa",
@@ -25,7 +25,6 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className="overflow-x-hidden">
-        <Navbar />
         <Header />
         <main>{children}</main>
         <Footer />
