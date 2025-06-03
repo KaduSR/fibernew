@@ -5,6 +5,7 @@ import Footer from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import FloatingButton from "@/components/ui/FloatingButton";
 import "@/styles/globals.css";
+import SliderBanner from "@/components/layout/SliderBanner";
 
 const inter = Inter({
   subsets: ["latin"], display: "swap",
@@ -26,10 +27,12 @@ export default function RootLayout({
     <html lang="pt-BR">
       <body className="overflow-x-hidden">
         <Header />
+        <SliderBanner />
         <main>{children}</main>
         <Footer />
         <FloatingButton />
       </body>
     </html>
+    
   );
 }

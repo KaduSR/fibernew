@@ -19,13 +19,6 @@ const SERVICES = [
     link: "/streaming/brisamusic",
   },
   {
-    id: "brisaplay",
-    title: "Brisaplay",
-    description: "Filmes, séries e canais de TV ao vivo",
-    icon: Film,
-    link: "/streaming/brisaplay",
-  },
-  {
     id: "conecta-plus",
     title: "Conecta+",
     description: "Serviço de atendimento especializado",
